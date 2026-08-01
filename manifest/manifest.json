@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-08-01T19:12:58.179794+00:00",
+  "generated_at_utc": "2026-08-01T19:18:22.210776+00:00",
   "timezone_of_all_output_data": "UTC",
-  "file_count": 69,
+  "file_count": 77,
   "files": [
     {
       "instrument": "AUDCAD",
@@ -2513,6 +2513,44 @@
     },
     {
       "instrument": "XAGUSD",
+      "timeframe": "M1",
+      "file": "data/XAGUSD_M1.parquet",
+      "source_file": "XAGUSD1.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2026-04-21T18:03:00+00:00",
+        "end": "2026-07-31T20:59:00+00:00"
+      },
+      "file_size_bytes": 2027202,
+      "sha256": "45f5ef7eedebd63d8c661e98b74422b797d175069a0ba3f3fc05946d6ff5cc4d",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 91,
+        "largest_weekday_gap_hours": 53.12,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "XAGUSD",
       "timeframe": "M15",
       "file": "data/XAGUSD_M15.parquet",
       "source_file": "XAGUSD15.csv",
@@ -2621,6 +2659,272 @@
         },
         "volume_null_count": 0,
         "weekday_gap_count": 429,
+        "largest_weekday_gap_hours": 73.08,
+        "suspicious_gaps_over_72h_weekday": 2
+      }
+    },
+    {
+      "instrument": "XAUUSD",
+      "timeframe": "D1",
+      "file": "data/XAUUSD_D1.parquet",
+      "source_file": "XAUUSD1440.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 5216,
+      "date_range_utc": {
+        "start": "2009-10-26T00:00:00+00:00",
+        "end": "2026-07-31T00:00:00+00:00"
+      },
+      "file_size_bytes": 192858,
+      "sha256": "af37e2e5039ae5ba6e4aa53063515ed2e93561bd0cb7da068cecca6366b396bb",
+      "cleaning": {
+        "rows_before_cleaning": 5216,
+        "rows_after_cleaning": 5216,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 875,
+        "largest_weekday_gap_hours": 72.0,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "XAUUSD",
+      "timeframe": "H1",
+      "file": "data/XAUUSD_H1.parquet",
+      "source_file": "XAUUSD60.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2009-11-16T09:00:00+00:00",
+        "end": "2026-07-31T20:00:00+00:00"
+      },
+      "file_size_bytes": 3356248,
+      "sha256": "47913ac5d9c6064f34caeaed69e7bfa8ec022a7a1417233bac2f9c2a3b2e0e35",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 3305,
+        "largest_weekday_gap_hours": 77.0,
+        "suspicious_gaps_over_72h_weekday": 28
+      }
+    },
+    {
+      "instrument": "XAUUSD",
+      "timeframe": "H4",
+      "file": "data/XAUUSD_H4.parquet",
+      "source_file": "XAUUSD240.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 26836,
+      "date_range_utc": {
+        "start": "2009-10-26T20:00:00+00:00",
+        "end": "2026-07-31T20:00:00+00:00"
+      },
+      "file_size_bytes": 946527,
+      "sha256": "54a8bbf1faf949a7a998a4bff48b7f670166dfdc54322ee007ae3ec875ff4db6",
+      "cleaning": {
+        "rows_before_cleaning": 26836,
+        "rows_after_cleaning": 26836,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 888,
+        "largest_weekday_gap_hours": 76.0,
+        "suspicious_gaps_over_72h_weekday": 2
+      }
+    },
+    {
+      "instrument": "XAUUSD",
+      "timeframe": "M1",
+      "file": "data/XAUUSD_M1.parquet",
+      "source_file": "XAUUSD1.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2026-04-21T23:41:00+00:00",
+        "end": "2026-07-31T20:59:00+00:00"
+      },
+      "file_size_bytes": 2517710,
+      "sha256": "f78fb783037ecdf8269fe9e6be102033fef506036aafffad1069fc208eefd3d7",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 75,
+        "largest_weekday_gap_hours": 53.03,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "XAUUSD",
+      "timeframe": "M15",
+      "file": "data/XAUUSD_M15.parquet",
+      "source_file": "XAUUSD15.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2022-05-10T02:00:00+00:00",
+        "end": "2026-07-31T20:45:00+00:00"
+      },
+      "file_size_bytes": 3087246,
+      "sha256": "1284b8d9e5c134e643cc0abf349ae934b095a056226ede681a56d3c98e5178d3",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 1094,
+        "largest_weekday_gap_hours": 73.25,
+        "suspicious_gaps_over_72h_weekday": 8
+      }
+    },
+    {
+      "instrument": "XAUUSD",
+      "timeframe": "M30",
+      "file": "data/XAUUSD_M30.parquet",
+      "source_file": "XAUUSD30.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2018-02-14T06:00:00+00:00",
+        "end": "2026-07-31T20:30:00+00:00"
+      },
+      "file_size_bytes": 3124289,
+      "sha256": "8a6acd196c965e81852a02cbff95cce83648a62ad36bc7c52ad1df9f757d7e8c",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 2189,
+        "largest_weekday_gap_hours": 76.5,
+        "suspicious_gaps_over_72h_weekday": 16
+      }
+    },
+    {
+      "instrument": "XAUUSD",
+      "timeframe": "M5",
+      "file": "data/XAUUSD_M5.parquet",
+      "source_file": "XAUUSD5.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2025-03-04T19:00:00+00:00",
+        "end": "2026-07-31T20:55:00+00:00"
+      },
+      "file_size_bytes": 2993649,
+      "sha256": "9cb7f55a2e7ca58cbad50c4279881457b010eeeea1cb480f04143ef9454ed302",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 368,
         "largest_weekday_gap_hours": 73.08,
         "suspicious_gaps_over_72h_weekday": 2
       }
