@@ -1,8 +1,46 @@
 {
-  "generated_at_utc": "2026-08-01T16:55:40.639384+00:00",
+  "generated_at_utc": "2026-08-01T16:56:35.213508+00:00",
   "timezone_of_all_output_data": "UTC",
-  "file_count": 31,
+  "file_count": 49,
   "files": [
+    {
+      "instrument": "AUDCAD",
+      "timeframe": "D1",
+      "file": "data/AUDCAD_D1.parquet",
+      "source_file": "AUDCAD1440.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 5019,
+      "date_range_utc": {
+        "start": "2010-07-15T00:00:00+00:00",
+        "end": "2026-07-31T00:00:00+00:00"
+      },
+      "file_size_bytes": 250010,
+      "sha256": "c3dc67bde72db3d1d415a926d63ec6eb3e8a91cd5605bc3440d1fafd555b73aa",
+      "cleaning": {
+        "rows_before_cleaning": 5019,
+        "rows_after_cleaning": 5019,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 837,
+        "largest_weekday_gap_hours": 72.0,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
     {
       "instrument": "AUDCAD",
       "timeframe": "H1",
@@ -81,6 +119,44 @@
     },
     {
       "instrument": "AUDCAD",
+      "timeframe": "M1",
+      "file": "data/AUDCAD_M1.parquet",
+      "source_file": "AUDCAD1.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2026-04-24T18:40:00+00:00",
+        "end": "2026-07-31T20:59:00+00:00"
+      },
+      "file_size_bytes": 1613471,
+      "sha256": "fe356f33333cb9e02dd2a91d5231175a9ac4ed4561677567afecf9d9dfe0368d",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 228,
+        "largest_weekday_gap_hours": 49.02,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "AUDCAD",
       "timeframe": "M15",
       "file": "data/AUDCAD_M15.parquet",
       "source_file": "AUDCAD15.csv",
@@ -119,6 +195,44 @@
     },
     {
       "instrument": "AUDCAD",
+      "timeframe": "M30",
+      "file": "data/AUDCAD_M30.parquet",
+      "source_file": "AUDCAD30.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2018-07-23T06:00:00+00:00",
+        "end": "2026-07-31T20:30:00+00:00"
+      },
+      "file_size_bytes": 2206226,
+      "sha256": "80191045eab120808e6a8ee48b625e007ee1f2e6b155aa0ed9f4003dd44fe940",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 457,
+        "largest_weekday_gap_hours": 72.5,
+        "suspicious_gaps_over_72h_weekday": 2
+      }
+    },
+    {
+      "instrument": "AUDCAD",
       "timeframe": "M5",
       "file": "data/AUDCAD_M5.parquet",
       "source_file": "AUDCAD5.csv",
@@ -152,6 +266,44 @@
         "volume_null_count": 0,
         "weekday_gap_count": 115,
         "largest_weekday_gap_hours": 49.08,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "AUDCHF",
+      "timeframe": "D1",
+      "file": "data/AUDCHF_D1.parquet",
+      "source_file": "AUDCHF1440.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 5017,
+      "date_range_utc": {
+        "start": "2010-07-16T00:00:00+00:00",
+        "end": "2026-07-31T00:00:00+00:00"
+      },
+      "file_size_bytes": 248542,
+      "sha256": "bc199f0b39abac24e245402bc458878d6f515d3401ad9fba35a6700c1b74e2f7",
+      "cleaning": {
+        "rows_before_cleaning": 5017,
+        "rows_after_cleaning": 5017,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 837,
+        "largest_weekday_gap_hours": 72.0,
         "suspicious_gaps_over_72h_weekday": 0
       }
     },
@@ -233,6 +385,44 @@
     },
     {
       "instrument": "AUDCHF",
+      "timeframe": "M1",
+      "file": "data/AUDCHF_M1.parquet",
+      "source_file": "AUDCHF1.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2026-04-26T22:16:00+00:00",
+        "end": "2026-07-31T20:59:00+00:00"
+      },
+      "file_size_bytes": 1510332,
+      "sha256": "e2f9a1dfdca632a610d3d0a2b09bdc6791227b9d0c0386b07dde65401767f0e7",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 397,
+        "largest_weekday_gap_hours": 48.35,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "AUDCHF",
       "timeframe": "M15",
       "file": "data/AUDCHF_M15.parquet",
       "source_file": "AUDCHF15.csv",
@@ -271,6 +461,44 @@
     },
     {
       "instrument": "AUDCHF",
+      "timeframe": "M30",
+      "file": "data/AUDCHF_M30.parquet",
+      "source_file": "AUDCHF30.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2018-07-24T07:30:00+00:00",
+        "end": "2026-07-31T20:30:00+00:00"
+      },
+      "file_size_bytes": 2430043,
+      "sha256": "c9186d9e36ff1269929e5a6c65037277081c00d9d38c3814b4fea659960c1b9d",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 438,
+        "largest_weekday_gap_hours": 72.5,
+        "suspicious_gaps_over_72h_weekday": 2
+      }
+    },
+    {
+      "instrument": "AUDCHF",
       "timeframe": "M5",
       "file": "data/AUDCHF_M5.parquet",
       "source_file": "AUDCHF5.csv",
@@ -304,6 +532,44 @@
         "volume_null_count": 0,
         "weekday_gap_count": 112,
         "largest_weekday_gap_hours": 49.08,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "AUDUSD",
+      "timeframe": "D1",
+      "file": "data/AUDUSD_D1.parquet",
+      "source_file": "AUDUSD1440.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 5019,
+      "date_range_utc": {
+        "start": "2010-07-15T00:00:00+00:00",
+        "end": "2026-07-31T00:00:00+00:00"
+      },
+      "file_size_bytes": 255099,
+      "sha256": "33e7025bc889d87e0e61f530b60a364d0d25a9c4e9dfbe610a81fc8f6ba30001",
+      "cleaning": {
+        "rows_before_cleaning": 5019,
+        "rows_after_cleaning": 5019,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 837,
+        "largest_weekday_gap_hours": 72.0,
         "suspicious_gaps_over_72h_weekday": 0
       }
     },
@@ -385,6 +651,44 @@
     },
     {
       "instrument": "AUDUSD",
+      "timeframe": "M1",
+      "file": "data/AUDUSD_M1.parquet",
+      "source_file": "AUDUSD1.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2026-04-27T00:57:00+00:00",
+        "end": "2026-07-31T20:59:00+00:00"
+      },
+      "file_size_bytes": 1647889,
+      "sha256": "3b2a4f7b8f107af162fb71cf60fa58eca9347c9cff17d51df233210854dd925a",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 367,
+        "largest_weekday_gap_hours": 48.08,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "AUDUSD",
       "timeframe": "M15",
       "file": "data/AUDUSD_M15.parquet",
       "source_file": "AUDUSD15.csv",
@@ -419,6 +723,44 @@
         "weekday_gap_count": 222,
         "largest_weekday_gap_hours": 72.25,
         "suspicious_gaps_over_72h_weekday": 1
+      }
+    },
+    {
+      "instrument": "AUDUSD",
+      "timeframe": "M30",
+      "file": "data/AUDUSD_M30.parquet",
+      "source_file": "AUDUSD30.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2018-07-24T16:00:00+00:00",
+        "end": "2026-07-31T20:30:00+00:00"
+      },
+      "file_size_bytes": 2282690,
+      "sha256": "142ea8a9c5e80694b07f402e20a242b11a48cb9ef3f77b30a02321cb249ef7e0",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 433,
+        "largest_weekday_gap_hours": 72.5,
+        "suspicious_gaps_over_72h_weekday": 2
       }
     },
     {
@@ -727,6 +1069,44 @@
     },
     {
       "instrument": "USDCAD",
+      "timeframe": "D1",
+      "file": "data/USDCAD_D1.parquet",
+      "source_file": "USDCAD1440.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 5016,
+      "date_range_utc": {
+        "start": "2010-07-19T00:00:00+00:00",
+        "end": "2026-07-31T00:00:00+00:00"
+      },
+      "file_size_bytes": 259947,
+      "sha256": "6d95134f44997339c05254af9325cd3f914fc7e3fcff3c53e07fd5e53e79539d",
+      "cleaning": {
+        "rows_before_cleaning": 5016,
+        "rows_after_cleaning": 5016,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 836,
+        "largest_weekday_gap_hours": 72.0,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "USDCAD",
       "timeframe": "H1",
       "file": "data/USDCAD_H1.parquet",
       "source_file": "USDCAD60.csv",
@@ -803,6 +1183,44 @@
     },
     {
       "instrument": "USDCAD",
+      "timeframe": "M1",
+      "file": "data/USDCAD_M1.parquet",
+      "source_file": "USDCAD1.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2026-04-26T23:51:00+00:00",
+        "end": "2026-07-31T20:59:00+00:00"
+      },
+      "file_size_bytes": 1773686,
+      "sha256": "ace25fb8f9a7c10c1ee05ca867a4a302481112b4e8cf2a7c23b0b6167308dec8",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 440,
+        "largest_weekday_gap_hours": 48.08,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "USDCAD",
       "timeframe": "M15",
       "file": "data/USDCAD_M15.parquet",
       "source_file": "USDCAD15.csv",
@@ -841,6 +1259,44 @@
     },
     {
       "instrument": "USDCAD",
+      "timeframe": "M30",
+      "file": "data/USDCAD_M30.parquet",
+      "source_file": "USDCAD30.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2018-07-24T14:00:00+00:00",
+        "end": "2026-07-31T20:30:00+00:00"
+      },
+      "file_size_bytes": 2455532,
+      "sha256": "e2adbeeb9c1c8f7802f3a0b2799a3897224b2cd75b1b220c9a2e34978273b567",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 433,
+        "largest_weekday_gap_hours": 72.5,
+        "suspicious_gaps_over_72h_weekday": 2
+      }
+    },
+    {
+      "instrument": "USDCAD",
       "timeframe": "M5",
       "file": "data/USDCAD_M5.parquet",
       "source_file": "USDCAD5.csv",
@@ -874,6 +1330,44 @@
         "volume_null_count": 0,
         "weekday_gap_count": 86,
         "largest_weekday_gap_hours": 49.08,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "USDCHF",
+      "timeframe": "D1",
+      "file": "data/USDCHF_D1.parquet",
+      "source_file": "USDCHF1440.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 5016,
+      "date_range_utc": {
+        "start": "2010-07-19T00:00:00+00:00",
+        "end": "2026-07-31T00:00:00+00:00"
+      },
+      "file_size_bytes": 247225,
+      "sha256": "e6f878ff7cc46cf3e9c7dd69545fbc453869b4f2b3d8ebbd6fc4f6be3b6e1cb0",
+      "cleaning": {
+        "rows_before_cleaning": 5016,
+        "rows_after_cleaning": 5016,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 836,
+        "largest_weekday_gap_hours": 72.0,
         "suspicious_gaps_over_72h_weekday": 0
       }
     },
@@ -955,6 +1449,44 @@
     },
     {
       "instrument": "USDCHF",
+      "timeframe": "M1",
+      "file": "data/USDCHF_M1.parquet",
+      "source_file": "USDCHF1.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2026-04-26T22:22:00+00:00",
+        "end": "2026-07-31T20:59:00+00:00"
+      },
+      "file_size_bytes": 1667705,
+      "sha256": "489ead9494be3d21b5361cb21cce83a31597f536fba04bd88f41da6955702d3b",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 463,
+        "largest_weekday_gap_hours": 48.27,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "USDCHF",
       "timeframe": "M15",
       "file": "data/USDCHF_M15.parquet",
       "source_file": "USDCHF15.csv",
@@ -993,6 +1525,44 @@
     },
     {
       "instrument": "USDCHF",
+      "timeframe": "M30",
+      "file": "data/USDCHF_M30.parquet",
+      "source_file": "USDCHF30.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2018-07-24T06:30:00+00:00",
+        "end": "2026-07-31T20:30:00+00:00"
+      },
+      "file_size_bytes": 2425535,
+      "sha256": "25ddc3e3db839d64e90b2e0b285f9fd3a4144c89994f75ad2344a15fbb3cbdcc",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 435,
+        "largest_weekday_gap_hours": 72.5,
+        "suspicious_gaps_over_72h_weekday": 2
+      }
+    },
+    {
+      "instrument": "USDCHF",
       "timeframe": "M5",
       "file": "data/USDCHF_M5.parquet",
       "source_file": "USDCHF5.csv",
@@ -1026,6 +1596,44 @@
         "volume_null_count": 0,
         "weekday_gap_count": 91,
         "largest_weekday_gap_hours": 49.08,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "USDJPY",
+      "timeframe": "D1",
+      "file": "data/USDJPY_D1.parquet",
+      "source_file": "USDJPY1440.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 5017,
+      "date_range_utc": {
+        "start": "2010-07-19T00:00:00+00:00",
+        "end": "2026-07-31T00:00:00+00:00"
+      },
+      "file_size_bytes": 204124,
+      "sha256": "a9aa3bdc52257a1a78c919d1208aa26a26dd5999cdd02c133c71a1c6ca2262c7",
+      "cleaning": {
+        "rows_before_cleaning": 5017,
+        "rows_after_cleaning": 5017,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 836,
+        "largest_weekday_gap_hours": 72.0,
         "suspicious_gaps_over_72h_weekday": 0
       }
     },
@@ -1107,6 +1715,44 @@
     },
     {
       "instrument": "USDJPY",
+      "timeframe": "M1",
+      "file": "data/USDJPY_M1.parquet",
+      "source_file": "USDJPY1.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2026-04-27T01:42:00+00:00",
+        "end": "2026-07-31T20:59:00+00:00"
+      },
+      "file_size_bytes": 1715055,
+      "sha256": "8fff92afb1d589d0c8ee23fed63241624a7ff5504a1e0fcee4b6301c58b521dc",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 357,
+        "largest_weekday_gap_hours": 48.08,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "USDJPY",
       "timeframe": "M15",
       "file": "data/USDJPY_M15.parquet",
       "source_file": "USDJPY15.csv",
@@ -1141,6 +1787,44 @@
         "weekday_gap_count": 220,
         "largest_weekday_gap_hours": 72.25,
         "suspicious_gaps_over_72h_weekday": 1
+      }
+    },
+    {
+      "instrument": "USDJPY",
+      "timeframe": "M30",
+      "file": "data/USDJPY_M30.parquet",
+      "source_file": "USDJPY30.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2018-07-24T17:30:00+00:00",
+        "end": "2026-07-31T20:30:00+00:00"
+      },
+      "file_size_bytes": 2525246,
+      "sha256": "ae6f2104bf827e3e59f7f4945d9bcf32deac6c8334764bf52798760c0e94e34f",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 431,
+        "largest_weekday_gap_hours": 72.5,
+        "suspicious_gaps_over_72h_weekday": 2
       }
     },
     {
