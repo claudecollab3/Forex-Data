@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-08-01T16:25:29.543235+00:00",
+  "generated_at_utc": "2026-08-01T16:29:28.644170+00:00",
   "timezone_of_all_output_data": "UTC",
-  "file_count": 16,
+  "file_count": 20,
   "files": [
     {
       "instrument": "AUDCAD",
@@ -303,6 +303,158 @@
         },
         "volume_null_count": 0,
         "weekday_gap_count": 112,
+        "largest_weekday_gap_hours": 49.08,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "USDCAD",
+      "timeframe": "H1",
+      "file": "data/USDCAD_H1.parquet",
+      "source_file": "USDCAD60.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2010-07-19T20:00:00+00:00",
+        "end": "2026-07-31T20:00:00+00:00"
+      },
+      "file_size_bytes": 2882743,
+      "sha256": "770138fd82b9bd98d16220d4248f8e336231d078336c368add43bf298fd36d19",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 854,
+        "largest_weekday_gap_hours": 73.0,
+        "suspicious_gaps_over_72h_weekday": 4
+      }
+    },
+    {
+      "instrument": "USDCAD",
+      "timeframe": "H4",
+      "file": "data/USDCAD_H4.parquet",
+      "source_file": "USDCAD240.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 25851,
+      "date_range_utc": {
+        "start": "2010-07-19T08:00:00+00:00",
+        "end": "2026-07-31T20:00:00+00:00"
+      },
+      "file_size_bytes": 1069492,
+      "sha256": "56c87758ae8ce9ecc1799140d4cae1f578a0f03f289f621f01bcef15c29a405b",
+      "cleaning": {
+        "rows_before_cleaning": 25851,
+        "rows_after_cleaning": 25851,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 852,
+        "largest_weekday_gap_hours": 72.0,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "USDCAD",
+      "timeframe": "M15",
+      "file": "data/USDCAD_M15.parquet",
+      "source_file": "USDCAD15.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2022-07-27T23:15:00+00:00",
+        "end": "2026-07-31T20:45:00+00:00"
+      },
+      "file_size_bytes": 2180828,
+      "sha256": "826bec50b6c37affb9ca886eb2c97f97894e50c1d9596aa07dc11e000740b7da",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 226,
+        "largest_weekday_gap_hours": 72.25,
+        "suspicious_gaps_over_72h_weekday": 1
+      }
+    },
+    {
+      "instrument": "USDCAD",
+      "timeframe": "M5",
+      "file": "data/USDCAD_M5.parquet",
+      "source_file": "USDCAD5.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2025-03-31T22:50:00+00:00",
+        "end": "2026-07-31T20:55:00+00:00"
+      },
+      "file_size_bytes": 1871083,
+      "sha256": "86ce0f4360f68bf5415c6c1f066d4f9d42841270d65ce3d7bf5bb5fe1d992805",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 86,
         "largest_weekday_gap_hours": 49.08,
         "suspicious_gaps_over_72h_weekday": 0
       }
