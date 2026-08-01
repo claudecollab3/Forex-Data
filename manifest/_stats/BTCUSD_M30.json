@@ -1,0 +1,21 @@
+{
+  "rows_in": 100000,
+  "rows_out": 100000,
+  "null_timestamp_dropped": 0,
+  "null_price_dropped": 0,
+  "ohlc_invalid_dropped": 0,
+  "exact_duplicate_rows_collapsed": 0,
+  "volume_null_count": 0,
+  "source_timezone": "GMT",
+  "source_timezone_confidence": "user_declared_unverified",
+  "detected_format": "datetime-ohlcv",
+  "gap_count_weekday": 29,
+  "largest_gap_hours": 31.0,
+  "suspicious_gaps_over_72h_weekday": 0,
+  "start": "2020-10-24T06:00:00+00:00",
+  "end": "2026-07-31T21:30:00+00:00",
+  "notes": [],
+  "instrument": "BTCUSD",
+  "timeframe": "M30",
+  "source_file": "BTCUSD30.csv"
+}

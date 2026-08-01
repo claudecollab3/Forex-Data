@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-08-01T17:00:18.696149+00:00",
+  "generated_at_utc": "2026-08-01T17:06:06.016921+00:00",
   "timezone_of_all_output_data": "UTC",
-  "file_count": 56,
+  "file_count": 63,
   "files": [
     {
       "instrument": "AUDCAD",
@@ -798,6 +798,272 @@
         "volume_null_count": 0,
         "weekday_gap_count": 93,
         "largest_weekday_gap_hours": 49.08,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "BTCUSD",
+      "timeframe": "D1",
+      "file": "data/BTCUSD_D1.parquet",
+      "source_file": "BTCUSD1440.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 3181,
+      "date_range_utc": {
+        "start": "2017-05-23T00:00:00+00:00",
+        "end": "2026-07-31T00:00:00+00:00"
+      },
+      "file_size_bytes": 118519,
+      "sha256": "d960b4185b8bc2cad705af1e9df34f541ecc131ea7a55a2c1fea6976f76b340c",
+      "cleaning": {
+        "rows_before_cleaning": 3181,
+        "rows_after_cleaning": 3181,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 170,
+        "largest_weekday_gap_hours": 96.0,
+        "suspicious_gaps_over_72h_weekday": 1
+      }
+    },
+    {
+      "instrument": "BTCUSD",
+      "timeframe": "H1",
+      "file": "data/BTCUSD_H1.parquet",
+      "source_file": "BTCUSD60.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 71476,
+      "date_range_utc": {
+        "start": "2017-05-23T00:00:00+00:00",
+        "end": "2026-07-31T21:00:00+00:00"
+      },
+      "file_size_bytes": 2499630,
+      "sha256": "44d5062f4e36979e15361b72e1740872103d8b35846b9522dd7b6b6332bcf57d",
+      "cleaning": {
+        "rows_before_cleaning": 71476,
+        "rows_after_cleaning": 71476,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 247,
+        "largest_weekday_gap_hours": 73.0,
+        "suspicious_gaps_over_72h_weekday": 2
+      }
+    },
+    {
+      "instrument": "BTCUSD",
+      "timeframe": "H4",
+      "file": "data/BTCUSD_H4.parquet",
+      "source_file": "BTCUSD240.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 18111,
+      "date_range_utc": {
+        "start": "2017-05-23T00:00:00+00:00",
+        "end": "2026-07-31T20:00:00+00:00"
+      },
+      "file_size_bytes": 656262,
+      "sha256": "f377b6b86c9c39592de44f83ce4f3a272a3eeba0a0729876169a88f42cfa6f7b",
+      "cleaning": {
+        "rows_before_cleaning": 18111,
+        "rows_after_cleaning": 18111,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 198,
+        "largest_weekday_gap_hours": 76.0,
+        "suspicious_gaps_over_72h_weekday": 1
+      }
+    },
+    {
+      "instrument": "BTCUSD",
+      "timeframe": "M1",
+      "file": "data/BTCUSD_M1.parquet",
+      "source_file": "BTCUSD1.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2026-05-23T08:51:00+00:00",
+        "end": "2026-07-31T21:59:00+00:00"
+      },
+      "file_size_bytes": 2627998,
+      "sha256": "a045c1d704adfd31bb406ce76be70e2b022c9a9583a6bf3f11b1105c7c853e00",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 10,
+        "largest_weekday_gap_hours": 0.7,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "BTCUSD",
+      "timeframe": "M15",
+      "file": "data/BTCUSD_M15.parquet",
+      "source_file": "BTCUSD15.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2023-09-18T23:15:00+00:00",
+        "end": "2026-07-31T21:45:00+00:00"
+      },
+      "file_size_bytes": 3381313,
+      "sha256": "c3a5c2b0521c59b8048b27984ddc819411a02e125f08f449bffe1b44cf1dec7a",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 17,
+        "largest_weekday_gap_hours": 30.75,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "BTCUSD",
+      "timeframe": "M30",
+      "file": "data/BTCUSD_M30.parquet",
+      "source_file": "BTCUSD30.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2020-10-24T06:00:00+00:00",
+        "end": "2026-07-31T21:30:00+00:00"
+      },
+      "file_size_bytes": 3449946,
+      "sha256": "e7b872b4fdf412283f9905c6fbc49e4e3d2822db71bfbad81e788e458d3c4e60",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 29,
+        "largest_weekday_gap_hours": 31.0,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "BTCUSD",
+      "timeframe": "M5",
+      "file": "data/BTCUSD_M5.parquet",
+      "source_file": "BTCUSD5.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2025-08-17T08:50:00+00:00",
+        "end": "2026-07-31T21:55:00+00:00"
+      },
+      "file_size_bytes": 3248532,
+      "sha256": "fce288433882683b74ebffc1ecf95ed3e8f46c6204754aecf522933bde1ccc14",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 6,
+        "largest_weekday_gap_hours": 23.08,
         "suspicious_gaps_over_72h_weekday": 0
       }
     },
