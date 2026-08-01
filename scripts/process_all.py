@@ -104,7 +104,7 @@ def main() -> int:
 
         out_name = f"{instrument}_{timeframe}"
         out_path = DATA / f"{out_name}.parquet"
-        cleaned_df.to_parquet(out_path, engine="pyarrow", compression="snappy", index=False)
+        cleaned_df.to_parquet(out_path, engine="pyarrow", compression="zstd", compression_level=19, index=False)
 
         stats_dict = asdict(stats)
         stats_dict["instrument"] = instrument

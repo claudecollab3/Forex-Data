@@ -18,33 +18,53 @@ timeframe set.
 
 | Instrument | M1 | M5 | M15 | M30 | H1 | H4 | D1 |
 |---|---|---|---|---|---|---|---|
-| EUR/USD, GBP/USD, USD/JPY, USD/CHF, USD/CAD, AUD/USD, NZD/USD | 0.3 | 1.3 | 4.0 | 8.0 | 16.0 | 16.0 | 16.0 |
+| EUR/USD, AUD/USD, GBP/USD | 26.2 | 26.2 | 26.2 | 26.2 | 26.2 | 26.2 | 26.2 |
+| USD/JPY, USD/CHF, USD/CAD, NZD/USD | 0.3 | 1.3 | 4.0 | 8.0 | 16.0 | 16.0 | 16.0 |
 | XAU/USD | 0.3 | 1.4 | 4.2 | 8.5 | 16.7 | 16.8 | 16.8 |
 | AUDCAD, AUDCHF (bonus) | 0.3 | 1.3 | 4.0 | 8.0 | 16.0 | 16.0 | 16.0 |
 | XAGUSD (bonus) | 0.3 | 1.4 | 4.2 | 8.3 | 15.4 | 15.4 | 15.4 |
 | BTCUSD (bonus) | 0.2 | 1.0 | 2.9 | 5.8 | 9.2 | 9.2 | 9.2 |
 
-**This does not reach the 20-year target uniformly.** H1/H4/D1 land close to
-it (~16-17 years) and are treated as the practical ceiling for this source.
-M1/M5/M15/M30 fall well short (down to a few months for M1) because the
-source cannot export more than ~100,000 rows in a single download, and it
-only supports single-day-granularity date ranges — extending the fine
-timeframes to 20 years of continuous history would require on the order of
-thousands of per-day downloads per instrument/timeframe, which was judged
-impractical. See `manifest/manifest.csv` for the exact per-file range.
+**EUR/USD, AUD/USD, and GBP/USD exceed the 20-year target uniformly across
+every timeframe** (2000-05/06 → 2026-07, ~26.2 years). This was achieved by
+merging in HistData.com's M1 exports (chunked by full calendar year, not
+row-capped) for 2000-2023, then deterministically resampling that M1 series
+into M5/M15/M30/H1/H4/D1 (open=first, high=max, low=min, close=last,
+volume=sum -- a real aggregation, not fabrication) and merging the result
+with the existing forexsb-derived native data. See
+`scripts/merge_histdata.py`.
+
+The remaining 5 required instruments (USD/JPY, USD/CHF, USD/CAD, NZD/USD,
+XAU/USD) and all 4 bonus instruments have **not** had this treatment yet --
+they're still forexsb-only. H1/H4/D1 for those land at ~16-17 years (the
+practical ceiling for that source alone); M1/M5/M15/M30 fall well short
+(down to a few months for M1) because forexsb.com caps a single export at
+~100,000 rows. Applying the same HistData merge to these instruments would
+close that gap the same way it did for EUR/USD, AUD/USD, and GBP/USD.
+See `manifest/manifest.csv` for the exact per-file range.
 
 ## Layout
 
 - `raw/` — raw exports as downloaded from the source (gitignored; only
   `raw/sources.csv` is tracked). `raw/sources.csv` maps each raw file to an
   instrument, timeframe, and the timezone its timestamps are declared in.
+  `raw/histdata_staging/<INSTRUMENT>/` holds staged HistData.com M1 XLSX
+  exports (gitignored) awaiting `merge_histdata.py`.
 - `scripts/` — the processing pipeline:
-  - `lib/parsing.py` — schema-flexible CSV parser (MT4/MT5-style and
-    generic date/datetime + OHLCV layouts).
+  - `lib/parsing.py` — schema-flexible parser: MT4/MT5-style CSV, generic
+    date/datetime + OHLCV CSV layouts, and HistData.com's XLSX export.
   - `lib/cleaning.py` — cleaning rules (see below) and gap analysis.
+  - `lib/resample.py` — deterministic OHLC resampling (M1 -> coarser
+    timeframes) used by the HistData merge; not used on forexsb data, which
+    is already natively per-timeframe.
   - `process_all.py` — runs parsing + cleaning for every row in
     `raw/sources.csv`, writes `data/<INSTRUMENT>_<TIMEFRAME>.parquet` and a
     per-file stats sidecar under `manifest/_stats/`.
+  - `merge_histdata.py` — for each instrument staged under
+    `raw/histdata_staging/`, cleans the combined HistData M1 series,
+    resamples it to every other timeframe, and unions the result with
+    whatever's already in `data/` (native rows win on an exact-timestamp
+    collision), overwriting `data/<INSTRUMENT>_<TIMEFRAME>.parquet`.
   - `build_manifest.py` — aggregates the sidecars + Parquet file metadata
     into `manifest/manifest.json` and `manifest/manifest.csv`.
 - `data/` — output Parquet files, one per instrument/timeframe. Columns:
@@ -82,21 +102,29 @@ is ever fabricated or interpolated**:
 
 ```console
 pip install -r requirements.txt
-python3 scripts/process_all.py     # raw/*.csv -> data/*.parquet
-python3 scripts/build_manifest.py  # data/*.parquet -> manifest/*
+python3 scripts/process_all.py      # raw/*.csv,xlsx -> data/*.parquet (per raw/sources.csv)
+python3 scripts/merge_histdata.py   # raw/histdata_staging/* -> merges into data/*.parquet
+python3 scripts/build_manifest.py   # data/*.parquet -> manifest/*
 ```
 
 ## Source & license
 
-Raw data was downloaded by hand from **forexsb.com** (Forex Strategy
-Builder's historical data downloads) and supplied to this pipeline as CSV
-exports.
+Raw data was downloaded by hand from two sources and supplied to this
+pipeline:
 
-**The site's specific usage terms have not yet been independently verified
-by the pipeline author** (this session had no direct network access to the
+- **forexsb.com** (Forex Strategy Builder's historical data downloads) —
+  CSV exports, all instruments.
+- **HistData.com** — free XLSX exports, chunked by calendar year, used for
+  EUR/USD, AUD/USD, and GBP/USD M1 to extend history to ~26 years across
+  every timeframe. Declared timezone: fixed EST, no DST (user-confirmed
+  from HistData's own documentation), mapped to `Etc/GMT+5`.
+
+**Neither site's specific usage terms have been independently verified by
+the pipeline author** (this session had no direct network access to either
 source). Before treating this dataset as cleared for a given use (e.g.
-redistribution, commercial use), confirm forexsb.com's actual license/terms
-of use for its historical data downloads.
+redistribution, commercial use), confirm both forexsb.com's and
+HistData.com's actual license/terms of use for their historical data
+downloads.
 
 ## Known limitations
 

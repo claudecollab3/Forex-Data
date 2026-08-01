@@ -1,5 +1,7 @@
 raw/*.csv
 raw/*.zip
+raw/*.xlsx
+raw/histdata_staging/
 !raw/sources.csv
 __pycache__/
 *.pyc

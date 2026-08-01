@@ -1,9 +1,11 @@
-"""Flexible parsing for historical OHLCV CSV exports (MT4/MT5-style and generic)."""
+"""Flexible parsing for historical OHLCV exports (MT4/MT5-style, generic CSV,
+and HistData.com's XLSX export)."""
 from __future__ import annotations
 
 import csv
 import io
 from dataclasses import dataclass
+from pathlib import Path
 
 import pandas as pd
 
@@ -32,14 +34,18 @@ def _read_raw(path: str) -> list[str]:
 
 
 def load_ohlcv_csv(path: str) -> ParseResult:
-    """Parse a raw OHLCV CSV export without assuming a fixed schema.
+    """Parse a raw OHLCV export without assuming a fixed schema.
 
-    Supports:
+    Dispatches to XLSX handling for .xlsx files (HistData.com's export
+    format); otherwise parses as CSV/TSV. CSV support includes:
       - MT4/MT5 export: Date,Time,Open,High,Low,Close,Volume (no header,
         Date as YYYY.MM.DD, Time as HH:MM[:SS])
       - Generic: Datetime,Open,High,Low,Close,Volume (with or without header)
       - Generic: Date,Time,Open,High,Low,Close (no volume column)
     """
+    if Path(path).suffix.lower() == ".xlsx":
+        return _load_histdata_xlsx(path)
+
     lines = _read_raw(path)
     non_empty = [l for l in lines if l.strip()]
     if not non_empty:
@@ -176,3 +182,24 @@ def load_ohlcv_csv(path: str) -> ParseResult:
             raise ValueError(f"{path}: unrecognized column layout ({ncols} columns, no header)")
 
     return ParseResult(df=out, detected_format=fmt, had_header=has_header)
+
+
+def _load_histdata_xlsx(path: str) -> ParseResult:
+    """HistData.com XLSX export: no header, 6 columns
+    (Datetime, Open, High, Low, Close, Volume). Volume is consistently 0
+    for FX in this source (not a real traded-volume figure)."""
+    raw_df = pd.read_excel(path, header=None, engine="openpyxl")
+    if raw_df.shape[1] != 6:
+        raise ValueError(f"{path}: expected 6 columns (datetime,O,H,L,C,V), got {raw_df.shape[1]}")
+
+    out = pd.DataFrame(
+        {
+            "timestamp": pd.to_datetime(raw_df.iloc[:, 0], errors="coerce", utc=False),
+            "open": pd.to_numeric(raw_df.iloc[:, 1], errors="coerce"),
+            "high": pd.to_numeric(raw_df.iloc[:, 2], errors="coerce"),
+            "low": pd.to_numeric(raw_df.iloc[:, 3], errors="coerce"),
+            "close": pd.to_numeric(raw_df.iloc[:, 4], errors="coerce"),
+            "volume": pd.to_numeric(raw_df.iloc[:, 5], errors="coerce"),
+        }
+    )
+    return ParseResult(df=out, detected_format="histdata-xlsx", had_header=False)

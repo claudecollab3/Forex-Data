@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-01T19:25:38.007384+00:00",
+  "generated_at_utc": "2026-08-01T23:55:11.331349+00:00",
   "timezone_of_all_output_data": "UTC",
   "file_count": 84,
   "files": [
@@ -16,8 +16,8 @@
         "start": "2010-07-15T00:00:00+00:00",
         "end": "2026-07-31T00:00:00+00:00"
       },
-      "file_size_bytes": 250010,
-      "sha256": "c3dc67bde72db3d1d415a926d63ec6eb3e8a91cd5605bc3440d1fafd555b73aa",
+      "file_size_bytes": 169726,
+      "sha256": "69460ff36d62ae8a65a7e590e714cd0dcdf101228c43618dfc761ac3c8ad4ef0",
       "cleaning": {
         "rows_before_cleaning": 5019,
         "rows_after_cleaning": 5019,
@@ -54,8 +54,8 @@
         "start": "2010-07-15T20:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 2476655,
-      "sha256": "539a4ebac2d9d4a2469267752729ee6774d9b5a768a483e615ff022f90d8fc5a",
+      "file_size_bytes": 1796948,
+      "sha256": "5862b9d1aaee6be7cdd45618c7cecefc7aa8a82e0cb8a7fa5df9cbce4dc3b931",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -92,8 +92,8 @@
         "start": "2010-07-15T08:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 939295,
-      "sha256": "bfbd6871aa0522f3ce954e77333132acd1abd5d788349a0c9a2e6d19859b9629",
+      "file_size_bytes": 624771,
+      "sha256": "5a70a13acd203b3eac4b1a0f66ca751c60ef3bc64367ec5ee6e919856733d455",
       "cleaning": {
         "rows_before_cleaning": 25863,
         "rows_after_cleaning": 25863,
@@ -130,8 +130,8 @@
         "start": "2026-04-24T18:40:00+00:00",
         "end": "2026-07-31T20:59:00+00:00"
       },
-      "file_size_bytes": 1613471,
-      "sha256": "fe356f33333cb9e02dd2a91d5231175a9ac4ed4561677567afecf9d9dfe0368d",
+      "file_size_bytes": 1222445,
+      "sha256": "28e8d82fdf2b367dccbc0bc30c3a60a9325153979d29a56a056c35bf4b698549",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -168,8 +168,8 @@
         "start": "2022-07-26T12:45:00+00:00",
         "end": "2026-07-31T20:45:00+00:00"
       },
-      "file_size_bytes": 2109672,
-      "sha256": "f921055fb03db3b65d374c7ca35923b911e929f8ae22f020ae1e520cfc3e0c89",
+      "file_size_bytes": 1551181,
+      "sha256": "f7cbce26cd705a634e3f4e82fe78ad962d3c76398a81d4e233e65ec73128fae0",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -206,8 +206,8 @@
         "start": "2018-07-23T06:00:00+00:00",
         "end": "2026-07-31T20:30:00+00:00"
       },
-      "file_size_bytes": 2206226,
-      "sha256": "80191045eab120808e6a8ee48b625e007ee1f2e6b155aa0ed9f4003dd44fe940",
+      "file_size_bytes": 1623825,
+      "sha256": "1ee9b9aeb2a31e12c98e1a6e95847789f9d63ed2cec2b52ebdc181616321f057",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -244,8 +244,8 @@
         "start": "2025-03-30T21:55:00+00:00",
         "end": "2026-07-31T20:55:00+00:00"
       },
-      "file_size_bytes": 2011240,
-      "sha256": "b3e4e79e077000c3e439bdc12ef13ac05f65c57fa1cc952eeda2b5814f8b4eb0",
+      "file_size_bytes": 1453566,
+      "sha256": "e7af396bee76b77b13611b0e6da36d5186c78d72b666a7d1a7eb7b99038b6206",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -282,8 +282,8 @@
         "start": "2010-07-16T00:00:00+00:00",
         "end": "2026-07-31T00:00:00+00:00"
       },
-      "file_size_bytes": 248542,
-      "sha256": "bc199f0b39abac24e245402bc458878d6f515d3401ad9fba35a6700c1b74e2f7",
+      "file_size_bytes": 171584,
+      "sha256": "f21a4217420c498126b36469c2a3013f7de3a093f41b3e4f4b94af7f1b4a2b15",
       "cleaning": {
         "rows_before_cleaning": 5017,
         "rows_after_cleaning": 5017,
@@ -320,8 +320,8 @@
         "start": "2010-07-18T23:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 2928216,
-      "sha256": "a90d359568c66f7f1b84e28808b43b1ea9b6ab60febb5040ac4a4689b5af36d9",
+      "file_size_bytes": 1915032,
+      "sha256": "f11aa7dd4d494196abbbe2aa8941b5c8346682f524ca2bb269fd442191762b08",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -358,8 +358,8 @@
         "start": "2010-07-16T12:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 1067149,
-      "sha256": "27e9859c24af504a1b8feb0bd2d91a103103f937bd8c204fef81d354cf70502e",
+      "file_size_bytes": 647054,
+      "sha256": "b3bc5ae520894c85d24ef68fc86891f8bc886588b6a986ecb0730285018cc698",
       "cleaning": {
         "rows_before_cleaning": 25856,
         "rows_after_cleaning": 25856,
@@ -396,8 +396,8 @@
         "start": "2026-04-26T22:16:00+00:00",
         "end": "2026-07-31T20:59:00+00:00"
       },
-      "file_size_bytes": 1510332,
-      "sha256": "e2f9a1dfdca632a610d3d0a2b09bdc6791227b9d0c0386b07dde65401767f0e7",
+      "file_size_bytes": 1147851,
+      "sha256": "3514336ec4fb6149d1b3880e36a8366f30e39cd5523dae3db3480deb873ccaf5",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -434,8 +434,8 @@
         "start": "2022-07-27T13:45:00+00:00",
         "end": "2026-07-31T20:45:00+00:00"
       },
-      "file_size_bytes": 2188363,
-      "sha256": "d79a2a54e4d60bcd52e3d44725e8409d7b6ce50248cf5506d036a7cda8bb7b34",
+      "file_size_bytes": 1566500,
+      "sha256": "4cabc990ca1cc04c16f9f961c799bbd81d1f5c23d34e33cd7ef9590090bbaf25",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -472,8 +472,8 @@
         "start": "2018-07-24T07:30:00+00:00",
         "end": "2026-07-31T20:30:00+00:00"
       },
-      "file_size_bytes": 2430043,
-      "sha256": "c9186d9e36ff1269929e5a6c65037277081c00d9d38c3814b4fea659960c1b9d",
+      "file_size_bytes": 1692766,
+      "sha256": "efda814580c1675af9dcd745720bf2e32d5aeb4bba74d4cffe5efda5fbe808d6",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -510,8 +510,8 @@
         "start": "2025-03-31T18:40:00+00:00",
         "end": "2026-07-31T20:55:00+00:00"
       },
-      "file_size_bytes": 1808987,
-      "sha256": "0b79b162162981a99651cfe3b75f926769c1a408b4c5dd57e16dd8d748324529",
+      "file_size_bytes": 1378281,
+      "sha256": "0a9b47d2dda36a8bcd1bacbd2c838652c70b5bec2de0faa4b872827620a69a41",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -539,24 +539,24 @@
       "instrument": "AUDUSD",
       "timeframe": "D1",
       "file": "data/AUDUSD_D1.parquet",
-      "source_file": "AUDUSD1440.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 5019,
+      "source_file": "forexsb-native (5019 rows) + histdata M1 24yr merged, resampled to D1",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 7819,
       "date_range_utc": {
-        "start": "2010-07-15T00:00:00+00:00",
+        "start": "2000-06-05T00:00:00+00:00",
         "end": "2026-07-31T00:00:00+00:00"
       },
-      "file_size_bytes": 255099,
-      "sha256": "33e7025bc889d87e0e61f530b60a364d0d25a9c4e9dfbe610a81fc8f6ba30001",
+      "file_size_bytes": 226722,
+      "sha256": "b85aad9c919059e4b4ddc59c908cc2392d86ff9ea71f74524f11e24c8216365e",
       "cleaning": {
-        "rows_before_cleaning": 5019,
-        "rows_after_cleaning": 5019,
+        "rows_before_cleaning": 12017,
+        "rows_after_cleaning": 7819,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
-        "exact_duplicate_rows_collapsed": 0
+        "exact_duplicate_rows_collapsed": 4198
       },
       "data_quality": {
         "missing_values_by_column": {
@@ -568,33 +568,33 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 837,
-        "largest_weekday_gap_hours": 72.0,
-        "suspicious_gaps_over_72h_weekday": 0
+        "weekday_gap_count": 1354,
+        "largest_weekday_gap_hours": 1320.0,
+        "suspicious_gaps_over_72h_weekday": 56
       }
     },
     {
       "instrument": "AUDUSD",
       "timeframe": "H1",
       "file": "data/AUDUSD_H1.parquet",
-      "source_file": "AUDUSD60.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 100000,
+      "source_file": "forexsb-native (100000 rows) + histdata M1 24yr merged, resampled to H1",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 154776,
       "date_range_utc": {
-        "start": "2010-07-16T11:00:00+00:00",
+        "start": "2000-06-05T17:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 2926626,
-      "sha256": "57c2195a98743b77fc4ca916fb011a3089ae38ade37548a9fe3d5ed0e77e4478",
+      "file_size_bytes": 2575434,
+      "sha256": "e599419468046ea9d0bc43ad7e81afc94737507f26665886a4987f930cb65896",
       "cleaning": {
-        "rows_before_cleaning": 100000,
-        "rows_after_cleaning": 100000,
+        "rows_before_cleaning": 237231,
+        "rows_after_cleaning": 154776,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
-        "exact_duplicate_rows_collapsed": 0
+        "exact_duplicate_rows_collapsed": 82455
       },
       "data_quality": {
         "missing_values_by_column": {
@@ -606,33 +606,33 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 858,
-        "largest_weekday_gap_hours": 73.0,
-        "suspicious_gaps_over_72h_weekday": 4
+        "weekday_gap_count": 1483,
+        "largest_weekday_gap_hours": 1325.0,
+        "suspicious_gaps_over_72h_weekday": 81
       }
     },
     {
       "instrument": "AUDUSD",
       "timeframe": "H4",
       "file": "data/AUDUSD_H4.parquet",
-      "source_file": "AUDUSD240.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 25860,
+      "source_file": "forexsb-native (25860 rows) + histdata M1 24yr merged, resampled to H4",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 40020,
       "date_range_utc": {
-        "start": "2010-07-15T20:00:00+00:00",
+        "start": "2000-06-05T16:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 1092743,
-      "sha256": "51a3e2c418815113941c1e7472c4c656f30e3cfb3c97e536a1c3481e997d736a",
+      "file_size_bytes": 859414,
+      "sha256": "8b11ec390589ec8ce53bf6eea15919efc6062feb8c1d6e162bcae59c9b2120a5",
       "cleaning": {
-        "rows_before_cleaning": 25860,
-        "rows_after_cleaning": 25860,
+        "rows_before_cleaning": 61657,
+        "rows_after_cleaning": 40020,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
-        "exact_duplicate_rows_collapsed": 0
+        "exact_duplicate_rows_collapsed": 21637
       },
       "data_quality": {
         "missing_values_by_column": {
@@ -644,29 +644,29 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 853,
-        "largest_weekday_gap_hours": 72.0,
-        "suspicious_gaps_over_72h_weekday": 0
+        "weekday_gap_count": 1439,
+        "largest_weekday_gap_hours": 1328.0,
+        "suspicious_gaps_over_72h_weekday": 74
       }
     },
     {
       "instrument": "AUDUSD",
       "timeframe": "M1",
       "file": "data/AUDUSD_M1.parquet",
-      "source_file": "AUDUSD1.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 100000,
+      "source_file": "forexsb-native (100000 rows) + histdata M1 24yr merged",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 7438236,
       "date_range_utc": {
-        "start": "2026-04-27T00:57:00+00:00",
+        "start": "2000-06-05T17:03:00+00:00",
         "end": "2026-07-31T20:59:00+00:00"
       },
-      "file_size_bytes": 1647889,
-      "sha256": "3b2a4f7b8f107af162fb71cf60fa58eca9347c9cff17d51df233210854dd925a",
+      "file_size_bytes": 65753936,
+      "sha256": "5f658b407e2b6da7789ec6efbc72f08e958bc21637d2f06f352ad2d6b5750e49",
       "cleaning": {
-        "rows_before_cleaning": 100000,
-        "rows_after_cleaning": 100000,
+        "rows_before_cleaning": 7438236,
+        "rows_after_cleaning": 7438236,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
@@ -682,33 +682,33 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 367,
-        "largest_weekday_gap_hours": 48.08,
-        "suspicious_gaps_over_72h_weekday": 0
+        "weekday_gap_count": 417021,
+        "largest_weekday_gap_hours": 20378.98,
+        "suspicious_gaps_over_72h_weekday": 84
       }
     },
     {
       "instrument": "AUDUSD",
       "timeframe": "M15",
       "file": "data/AUDUSD_M15.parquet",
-      "source_file": "AUDUSD15.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 100000,
+      "source_file": "forexsb-native (100000 rows) + histdata M1 24yr merged, resampled to M15",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 613819,
       "date_range_utc": {
-        "start": "2022-07-28T03:15:00+00:00",
+        "start": "2000-06-05T17:00:00+00:00",
         "end": "2026-07-31T20:45:00+00:00"
       },
-      "file_size_bytes": 2049441,
-      "sha256": "a5b8ef0c56153e356958f35698e0809174c05fa244d6cbe81d6dff391b17aa8f",
+      "file_size_bytes": 6883216,
+      "sha256": "43cbc7de7ac677ae405f3a5dd8f0d529a8852e5e7a38aad831f0358af7dde616",
       "cleaning": {
-        "rows_before_cleaning": 100000,
-        "rows_after_cleaning": 100000,
+        "rows_before_cleaning": 646005,
+        "rows_after_cleaning": 613819,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
-        "exact_duplicate_rows_collapsed": 0
+        "exact_duplicate_rows_collapsed": 32186
       },
       "data_quality": {
         "missing_values_by_column": {
@@ -720,33 +720,33 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 222,
-        "largest_weekday_gap_hours": 72.25,
-        "suspicious_gaps_over_72h_weekday": 1
+        "weekday_gap_count": 2722,
+        "largest_weekday_gap_hours": 1324.5,
+        "suspicious_gaps_over_72h_weekday": 84
       }
     },
     {
       "instrument": "AUDUSD",
       "timeframe": "M30",
       "file": "data/AUDUSD_M30.parquet",
-      "source_file": "AUDUSD30.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 100000,
+      "source_file": "forexsb-native (100000 rows) + histdata M1 24yr merged, resampled to M30",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 308143,
       "date_range_utc": {
-        "start": "2018-07-24T16:00:00+00:00",
+        "start": "2000-06-05T17:00:00+00:00",
         "end": "2026-07-31T20:30:00+00:00"
       },
-      "file_size_bytes": 2282690,
-      "sha256": "142ea8a9c5e80694b07f402e20a242b11a48cb9ef3f77b30a02321cb249ef7e0",
+      "file_size_bytes": 4046818,
+      "sha256": "09b0d2decc78d1d2f0bc08dc3ff0a4d9fcd275988e218f04f881f8406cd581c3",
       "cleaning": {
-        "rows_before_cleaning": 100000,
-        "rows_after_cleaning": 100000,
+        "rows_before_cleaning": 373874,
+        "rows_after_cleaning": 308143,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
-        "exact_duplicate_rows_collapsed": 0
+        "exact_duplicate_rows_collapsed": 65731
       },
       "data_quality": {
         "missing_values_by_column": {
@@ -758,29 +758,29 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 433,
-        "largest_weekday_gap_hours": 72.5,
-        "suspicious_gaps_over_72h_weekday": 2
+        "weekday_gap_count": 1596,
+        "largest_weekday_gap_hours": 1324.5,
+        "suspicious_gaps_over_72h_weekday": 84
       }
     },
     {
       "instrument": "AUDUSD",
       "timeframe": "M5",
       "file": "data/AUDUSD_M5.parquet",
-      "source_file": "AUDUSD5.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 100000,
+      "source_file": "forexsb-native (100000 rows) + histdata M1 24yr merged, resampled to M5",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 1713148,
       "date_range_utc": {
-        "start": "2025-03-31T22:30:00+00:00",
+        "start": "2000-06-05T17:00:00+00:00",
         "end": "2026-07-31T20:55:00+00:00"
       },
-      "file_size_bytes": 1960641,
-      "sha256": "cebefbf0677ec189b560ff3d9e756665a43f66ca932acf0b612ec6c353cc66fb",
+      "file_size_bytes": 17222706,
+      "sha256": "dbcabe2e79518e85cffffdef5a0900081600bf1a049d8c27bb7b866819749d05",
       "cleaning": {
-        "rows_before_cleaning": 100000,
-        "rows_after_cleaning": 100000,
+        "rows_before_cleaning": 1713148,
+        "rows_after_cleaning": 1713148,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
@@ -796,9 +796,9 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 93,
-        "largest_weekday_gap_hours": 49.08,
-        "suspicious_gaps_over_72h_weekday": 0
+        "weekday_gap_count": 21116,
+        "largest_weekday_gap_hours": 10992.58,
+        "suspicious_gaps_over_72h_weekday": 84
       }
     },
     {
@@ -814,8 +814,8 @@
         "start": "2017-05-23T00:00:00+00:00",
         "end": "2026-07-31T00:00:00+00:00"
       },
-      "file_size_bytes": 118519,
-      "sha256": "d960b4185b8bc2cad705af1e9df34f541ecc131ea7a55a2c1fea6976f76b340c",
+      "file_size_bytes": 82853,
+      "sha256": "e8b00ea32c8c43765e644fe2379566fe18cac4ab0109d9960325571534ba4a8a",
       "cleaning": {
         "rows_before_cleaning": 3181,
         "rows_after_cleaning": 3181,
@@ -852,8 +852,8 @@
         "start": "2017-05-23T00:00:00+00:00",
         "end": "2026-07-31T21:00:00+00:00"
       },
-      "file_size_bytes": 2499630,
-      "sha256": "44d5062f4e36979e15361b72e1740872103d8b35846b9522dd7b6b6332bcf57d",
+      "file_size_bytes": 1713571,
+      "sha256": "1c75e5b2cfecc8d10fe5b4369e35c2e99dab65cf5a621381d1a5244821fe2079",
       "cleaning": {
         "rows_before_cleaning": 71476,
         "rows_after_cleaning": 71476,
@@ -890,8 +890,8 @@
         "start": "2017-05-23T00:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 656262,
-      "sha256": "f377b6b86c9c39592de44f83ce4f3a272a3eeba0a0729876169a88f42cfa6f7b",
+      "file_size_bytes": 448599,
+      "sha256": "7278a3ec5ba8374ab91483a13c5fd7df30739aa826975cd60c952ea3ceab29d9",
       "cleaning": {
         "rows_before_cleaning": 18111,
         "rows_after_cleaning": 18111,
@@ -928,8 +928,8 @@
         "start": "2026-05-23T08:51:00+00:00",
         "end": "2026-07-31T21:59:00+00:00"
       },
-      "file_size_bytes": 2627998,
-      "sha256": "a045c1d704adfd31bb406ce76be70e2b022c9a9583a6bf3f11b1105c7c853e00",
+      "file_size_bytes": 1823851,
+      "sha256": "112261c972e23a9f8074a823486d8827144a797c12e886968d8d2197c9c07b24",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -966,8 +966,8 @@
         "start": "2023-09-18T23:15:00+00:00",
         "end": "2026-07-31T21:45:00+00:00"
       },
-      "file_size_bytes": 3381313,
-      "sha256": "c3a5c2b0521c59b8048b27984ddc819411a02e125f08f449bffe1b44cf1dec7a",
+      "file_size_bytes": 2334012,
+      "sha256": "f5ac769d59b3f2e5ec78dc8f44b5e68c13e6d761ce750fe54fff10f7575cb9ff",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -1004,8 +1004,8 @@
         "start": "2020-10-24T06:00:00+00:00",
         "end": "2026-07-31T21:30:00+00:00"
       },
-      "file_size_bytes": 3449946,
-      "sha256": "e7b872b4fdf412283f9905c6fbc49e4e3d2822db71bfbad81e788e458d3c4e60",
+      "file_size_bytes": 2379586,
+      "sha256": "43cae445e913b431916957c7b633f724dd423413d82a854a4cd4dbcd6e9b6fef",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -1042,8 +1042,8 @@
         "start": "2025-08-17T08:50:00+00:00",
         "end": "2026-07-31T21:55:00+00:00"
       },
-      "file_size_bytes": 3248532,
-      "sha256": "fce288433882683b74ebffc1ecf95ed3e8f46c6204754aecf522933bde1ccc14",
+      "file_size_bytes": 2252489,
+      "sha256": "200f4f92a0d943c06e29c3145fbaebf181de4f8893e25f2ccb9d13c51dbc489f",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -1071,24 +1071,24 @@
       "instrument": "EURUSD",
       "timeframe": "D1",
       "file": "data/EURUSD_D1.parquet",
-      "source_file": "EURUSD1440.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 5016,
+      "source_file": "forexsb-native (5016 rows) + histdata M1 24yr merged, resampled to D1",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 8031,
       "date_range_utc": {
-        "start": "2010-07-20T00:00:00+00:00",
+        "start": "2000-05-30T00:00:00+00:00",
         "end": "2026-07-31T00:00:00+00:00"
       },
-      "file_size_bytes": 260549,
-      "sha256": "817b9cc1615de9efabff64f8f00400ff008525f6f1821b130dcada4c9999e7fa",
+      "file_size_bytes": 242096,
+      "sha256": "fb7187774857983aafae342d7a4f5ab425d9770de6b0434e5569c516a4debd71",
       "cleaning": {
-        "rows_before_cleaning": 5016,
-        "rows_after_cleaning": 5016,
+        "rows_before_cleaning": 12228,
+        "rows_after_cleaning": 8031,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
-        "exact_duplicate_rows_collapsed": 0
+        "exact_duplicate_rows_collapsed": 4197
       },
       "data_quality": {
         "missing_values_by_column": {
@@ -1100,33 +1100,33 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 836,
-        "largest_weekday_gap_hours": 72.0,
-        "suspicious_gaps_over_72h_weekday": 0
+        "weekday_gap_count": 1358,
+        "largest_weekday_gap_hours": 264.0,
+        "suspicious_gaps_over_72h_weekday": 34
       }
     },
     {
       "instrument": "EURUSD",
       "timeframe": "H1",
       "file": "data/EURUSD_H1.parquet",
-      "source_file": "EURUSD60.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 100000,
+      "source_file": "forexsb-native (100000 rows) + histdata M1 24yr merged, resampled to H1",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 160908,
       "date_range_utc": {
-        "start": "2010-07-20T10:00:00+00:00",
+        "start": "2000-05-30T22:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 3032765,
-      "sha256": "b38bb15fb68013601118c5594610d6e22bab28dbdb4af6c979d41b649e18aac1",
+      "file_size_bytes": 2742244,
+      "sha256": "3a045cd3ab757dccb07983a21ee7a8cf69e5217aa2b620e3a0be2a6dfc4f4392",
       "cleaning": {
-        "rows_before_cleaning": 100000,
-        "rows_after_cleaning": 100000,
+        "rows_before_cleaning": 243335,
+        "rows_after_cleaning": 160908,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
-        "exact_duplicate_rows_collapsed": 0
+        "exact_duplicate_rows_collapsed": 82427
       },
       "data_quality": {
         "missing_values_by_column": {
@@ -1138,33 +1138,33 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 853,
-        "largest_weekday_gap_hours": 73.0,
-        "suspicious_gaps_over_72h_weekday": 4
+        "weekday_gap_count": 1445,
+        "largest_weekday_gap_hours": 260.0,
+        "suspicious_gaps_over_72h_weekday": 54
       }
     },
     {
       "instrument": "EURUSD",
       "timeframe": "H4",
       "file": "data/EURUSD_H4.parquet",
-      "source_file": "EURUSD240.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 25850,
+      "source_file": "forexsb-native (25850 rows) + histdata M1 24yr merged, resampled to H4",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 41529,
       "date_range_utc": {
-        "start": "2010-07-20T00:00:00+00:00",
+        "start": "2000-05-30T20:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 1107081,
-      "sha256": "b8fd363a9eac28debc9fb7802957c62580213bbccf9e2fa06f3647f98e6a6474",
+      "file_size_bytes": 927301,
+      "sha256": "d808e724480300b701c2369172350ad38132e2bcfbbde6bf81adafe592fc1e6e",
       "cleaning": {
-        "rows_before_cleaning": 25850,
-        "rows_after_cleaning": 25850,
+        "rows_before_cleaning": 63156,
+        "rows_after_cleaning": 41529,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
-        "exact_duplicate_rows_collapsed": 0
+        "exact_duplicate_rows_collapsed": 21627
       },
       "data_quality": {
         "missing_values_by_column": {
@@ -1176,29 +1176,29 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 851,
-        "largest_weekday_gap_hours": 72.0,
-        "suspicious_gaps_over_72h_weekday": 0
+        "weekday_gap_count": 1413,
+        "largest_weekday_gap_hours": 260.0,
+        "suspicious_gaps_over_72h_weekday": 48
       }
     },
     {
       "instrument": "EURUSD",
       "timeframe": "M1",
       "file": "data/EURUSD_M1.parquet",
-      "source_file": "EURUSD1.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 100000,
+      "source_file": "forexsb-native (100000 rows) + histdata M1 24yr merged",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 8076053,
       "date_range_utc": {
-        "start": "2026-04-27T01:48:00+00:00",
+        "start": "2000-05-30T22:27:00+00:00",
         "end": "2026-07-31T20:59:00+00:00"
       },
-      "file_size_bytes": 1694393,
-      "sha256": "0ec3af8ab15b97803372c94c36ec1e046d9fa13b86bc823d02d4359ed5491c16",
+      "file_size_bytes": 72775274,
+      "sha256": "f3a31f1e14489d8902aae27e2a5490670c59f8c2719aab8cece4e547fa6d4130",
       "cleaning": {
-        "rows_before_cleaning": 100000,
-        "rows_after_cleaning": 100000,
+        "rows_before_cleaning": 8076053,
+        "rows_after_cleaning": 8076053,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
@@ -1214,33 +1214,33 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 367,
-        "largest_weekday_gap_hours": 48.08,
-        "suspicious_gaps_over_72h_weekday": 0
+        "weekday_gap_count": 332764,
+        "largest_weekday_gap_hours": 20379.83,
+        "suspicious_gaps_over_72h_weekday": 56
       }
     },
     {
       "instrument": "EURUSD",
       "timeframe": "M15",
       "file": "data/EURUSD_M15.parquet",
-      "source_file": "EURUSD15.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 100000,
+      "source_file": "forexsb-native (100000 rows) + histdata M1 24yr merged, resampled to M15",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 638825,
       "date_range_utc": {
-        "start": "2022-07-28T05:00:00+00:00",
+        "start": "2000-05-30T22:15:00+00:00",
         "end": "2026-07-31T20:45:00+00:00"
       },
-      "file_size_bytes": 2398823,
-      "sha256": "83c9c9070325c05541de2ecb41fb159fa3734304d93e61cc8c9a69b9c855cae2",
+      "file_size_bytes": 7419706,
+      "sha256": "ac17cdb49e38307b8c83a9f9b99d562cf0786feea67fda1e20e0576d2e234070",
       "cleaning": {
-        "rows_before_cleaning": 100000,
-        "rows_after_cleaning": 100000,
+        "rows_before_cleaning": 671028,
+        "rows_after_cleaning": 638825,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
-        "exact_duplicate_rows_collapsed": 0
+        "exact_duplicate_rows_collapsed": 32203
       },
       "data_quality": {
         "missing_values_by_column": {
@@ -1252,33 +1252,33 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 225,
-        "largest_weekday_gap_hours": 72.25,
-        "suspicious_gaps_over_72h_weekday": 1
+        "weekday_gap_count": 2264,
+        "largest_weekday_gap_hours": 259.25,
+        "suspicious_gaps_over_72h_weekday": 56
       }
     },
     {
       "instrument": "EURUSD",
       "timeframe": "M30",
       "file": "data/EURUSD_M30.parquet",
-      "source_file": "EURUSD30.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 100000,
+      "source_file": "forexsb-native (100000 rows) + histdata M1 24yr merged, resampled to M30",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 320400,
       "date_range_utc": {
-        "start": "2018-07-24T19:30:00+00:00",
+        "start": "2000-05-30T22:00:00+00:00",
         "end": "2026-07-31T20:30:00+00:00"
       },
-      "file_size_bytes": 2521812,
-      "sha256": "8511508cfce7dc92e1e9e81731057cd92cb4bae98997617104148d6e338500a3",
+      "file_size_bytes": 4327685,
+      "sha256": "da712447e5d39e830fc7fa36359d89807c1a8ccdbfcdd7fe80f425beeb364e9d",
       "cleaning": {
-        "rows_before_cleaning": 100000,
-        "rows_after_cleaning": 100000,
+        "rows_before_cleaning": 386146,
+        "rows_after_cleaning": 320400,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
-        "exact_duplicate_rows_collapsed": 0
+        "exact_duplicate_rows_collapsed": 65746
       },
       "data_quality": {
         "missing_values_by_column": {
@@ -1290,29 +1290,29 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 431,
-        "largest_weekday_gap_hours": 72.5,
-        "suspicious_gaps_over_72h_weekday": 2
+        "weekday_gap_count": 1535,
+        "largest_weekday_gap_hours": 259.5,
+        "suspicious_gaps_over_72h_weekday": 56
       }
     },
     {
       "instrument": "EURUSD",
       "timeframe": "M5",
       "file": "data/EURUSD_M5.parquet",
-      "source_file": "EURUSD5.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 100000,
+      "source_file": "forexsb-native (100000 rows) + histdata M1 24yr merged, resampled to M5",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 1800438,
       "date_range_utc": {
-        "start": "2025-03-31T22:15:00+00:00",
+        "start": "2000-05-30T22:25:00+00:00",
         "end": "2026-07-31T20:55:00+00:00"
       },
-      "file_size_bytes": 1974268,
-      "sha256": "aee71c03fa8955f4b18558dfb3c5c1b07907b0965551a2d5be999a5615dfaa28",
+      "file_size_bytes": 18695590,
+      "sha256": "364cbc6c4cc79f7ea09d56f3ace87702988b19f3fcf9beb411e77f8138dce4f3",
       "cleaning": {
-        "rows_before_cleaning": 100000,
-        "rows_after_cleaning": 100000,
+        "rows_before_cleaning": 1800438,
+        "rows_after_cleaning": 1800438,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
@@ -1328,33 +1328,33 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 92,
-        "largest_weekday_gap_hours": 49.08,
-        "suspicious_gaps_over_72h_weekday": 0
+        "weekday_gap_count": 11558,
+        "largest_weekday_gap_hours": 10992.33,
+        "suspicious_gaps_over_72h_weekday": 56
       }
     },
     {
       "instrument": "GBPUSD",
       "timeframe": "D1",
       "file": "data/GBPUSD_D1.parquet",
-      "source_file": "GBPUSD1440.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 5015,
+      "source_file": "forexsb-native (5015 rows) + histdata M1 24yr merged, resampled to D1",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 8025,
       "date_range_utc": {
-        "start": "2010-07-19T00:00:00+00:00",
+        "start": "2000-05-30T00:00:00+00:00",
         "end": "2026-07-31T00:00:00+00:00"
       },
-      "file_size_bytes": 258389,
-      "sha256": "640fa78dbe89f678d9ee548c2d3a374c7b037cf8053ed4fa023b11ea066a9258",
+      "file_size_bytes": 243991,
+      "sha256": "2eeb384af990fed8c580bb01a5856140b1f758eeba5ea4b62ec4a887e4ed88b7",
       "cleaning": {
-        "rows_before_cleaning": 5015,
-        "rows_after_cleaning": 5015,
+        "rows_before_cleaning": 12221,
+        "rows_after_cleaning": 8025,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
-        "exact_duplicate_rows_collapsed": 0
+        "exact_duplicate_rows_collapsed": 4196
       },
       "data_quality": {
         "missing_values_by_column": {
@@ -1366,33 +1366,33 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 836,
-        "largest_weekday_gap_hours": 72.0,
-        "suspicious_gaps_over_72h_weekday": 0
+        "weekday_gap_count": 1360,
+        "largest_weekday_gap_hours": 264.0,
+        "suspicious_gaps_over_72h_weekday": 34
       }
     },
     {
       "instrument": "GBPUSD",
       "timeframe": "H1",
       "file": "data/GBPUSD_H1.parquet",
-      "source_file": "GBPUSD60.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 100000,
+      "source_file": "forexsb-native (100000 rows) + histdata M1 24yr merged, resampled to H1",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 160895,
       "date_range_utc": {
-        "start": "2010-07-19T12:00:00+00:00",
+        "start": "2000-05-30T22:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 3121199,
-      "sha256": "cce68371b2f322e781546b96f85614d27d0bf59301a1e4c69b60bcd65eb6b4c8",
+      "file_size_bytes": 2734388,
+      "sha256": "0bd749c07a6ccdf1cdac3197c7253760b66d6a3f188e8eaa3c1953da444fe98a",
       "cleaning": {
-        "rows_before_cleaning": 100000,
-        "rows_after_cleaning": 100000,
+        "rows_before_cleaning": 243329,
+        "rows_after_cleaning": 160895,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
-        "exact_duplicate_rows_collapsed": 0
+        "exact_duplicate_rows_collapsed": 82434
       },
       "data_quality": {
         "missing_values_by_column": {
@@ -1404,33 +1404,33 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 855,
-        "largest_weekday_gap_hours": 73.0,
-        "suspicious_gaps_over_72h_weekday": 4
+        "weekday_gap_count": 1453,
+        "largest_weekday_gap_hours": 260.0,
+        "suspicious_gaps_over_72h_weekday": 54
       }
     },
     {
       "instrument": "GBPUSD",
       "timeframe": "H4",
       "file": "data/GBPUSD_H4.parquet",
-      "source_file": "GBPUSD240.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 25851,
+      "source_file": "forexsb-native (25851 rows) + histdata M1 24yr merged, resampled to H4",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 41529,
       "date_range_utc": {
-        "start": "2010-07-19T04:00:00+00:00",
+        "start": "2000-05-30T20:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 1104140,
-      "sha256": "fa6f4df886c4458ffbbde2b0fcfdc49ed12775719190f635dc423ba5d3750c6f",
+      "file_size_bytes": 952325,
+      "sha256": "e00c39b49a59ff598d2e203cf32092cf27edd636eadcfbdb1d02a5467b15973c",
       "cleaning": {
-        "rows_before_cleaning": 25851,
-        "rows_after_cleaning": 25851,
+        "rows_before_cleaning": 63159,
+        "rows_after_cleaning": 41529,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
-        "exact_duplicate_rows_collapsed": 0
+        "exact_duplicate_rows_collapsed": 21630
       },
       "data_quality": {
         "missing_values_by_column": {
@@ -1442,29 +1442,29 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 852,
-        "largest_weekday_gap_hours": 72.0,
-        "suspicious_gaps_over_72h_weekday": 0
+        "weekday_gap_count": 1416,
+        "largest_weekday_gap_hours": 260.0,
+        "suspicious_gaps_over_72h_weekday": 48
       }
     },
     {
       "instrument": "GBPUSD",
       "timeframe": "M1",
       "file": "data/GBPUSD_M1.parquet",
-      "source_file": "GBPUSD1.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 100000,
+      "source_file": "forexsb-native (100000 rows) + histdata M1 24yr merged",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 7962442,
       "date_range_utc": {
-        "start": "2026-04-27T01:10:00+00:00",
+        "start": "2000-05-30T22:59:00+00:00",
         "end": "2026-07-31T20:59:00+00:00"
       },
-      "file_size_bytes": 1727050,
-      "sha256": "4fc3fb3fbddfcabb3099d5a01ab9cd5f6568a6972f7eaebad7b50ba7c2752713",
+      "file_size_bytes": 74403424,
+      "sha256": "f054ae08e5af7bd83aea7761f258500e0a7270016c65b2e83021af29c6f0b646",
       "cleaning": {
-        "rows_before_cleaning": 100000,
-        "rows_after_cleaning": 100000,
+        "rows_before_cleaning": 7962442,
+        "rows_after_cleaning": 7962442,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
@@ -1480,33 +1480,33 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 348,
-        "largest_weekday_gap_hours": 48.1,
-        "suspicious_gaps_over_72h_weekday": 0
+        "weekday_gap_count": 345460,
+        "largest_weekday_gap_hours": 20379.2,
+        "suspicious_gaps_over_72h_weekday": 56
       }
     },
     {
       "instrument": "GBPUSD",
       "timeframe": "M15",
       "file": "data/GBPUSD_M15.parquet",
-      "source_file": "GBPUSD15.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 100000,
+      "source_file": "forexsb-native (100000 rows) + histdata M1 24yr merged, resampled to M15",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 638220,
       "date_range_utc": {
-        "start": "2022-07-27T17:15:00+00:00",
+        "start": "2000-05-30T22:45:00+00:00",
         "end": "2026-07-31T20:45:00+00:00"
       },
-      "file_size_bytes": 2462778,
-      "sha256": "7bc8c66ab8c785b86d4f44039034e94ad31b5de335a78be3682df7bc8a357f85",
+      "file_size_bytes": 7521062,
+      "sha256": "739c6363ec7c61a84e47b632ba7eb40478ded47549fc50108e45a61c0c9c54d3",
       "cleaning": {
-        "rows_before_cleaning": 100000,
-        "rows_after_cleaning": 100000,
+        "rows_before_cleaning": 670413,
+        "rows_after_cleaning": 638220,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
-        "exact_duplicate_rows_collapsed": 0
+        "exact_duplicate_rows_collapsed": 32193
       },
       "data_quality": {
         "missing_values_by_column": {
@@ -1518,33 +1518,33 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 224,
-        "largest_weekday_gap_hours": 72.25,
-        "suspicious_gaps_over_72h_weekday": 1
+        "weekday_gap_count": 2771,
+        "largest_weekday_gap_hours": 259.25,
+        "suspicious_gaps_over_72h_weekday": 56
       }
     },
     {
       "instrument": "GBPUSD",
       "timeframe": "M30",
       "file": "data/GBPUSD_M30.parquet",
-      "source_file": "GBPUSD30.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 100000,
+      "source_file": "forexsb-native (100000 rows) + histdata M1 24yr merged, resampled to M30",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 320344,
       "date_range_utc": {
-        "start": "2018-07-24T06:00:00+00:00",
+        "start": "2000-05-30T22:30:00+00:00",
         "end": "2026-07-31T20:30:00+00:00"
       },
-      "file_size_bytes": 2555910,
-      "sha256": "e4ddcc1b3d429428e0f6452113220c842f1f98a35368bb19ddef14aef1de5f3a",
+      "file_size_bytes": 4387532,
+      "sha256": "ee63d75f038beb3701c69b4530efd5b60a2b7be9a07015bd1c995d9a6085cfa8",
       "cleaning": {
-        "rows_before_cleaning": 100000,
-        "rows_after_cleaning": 100000,
+        "rows_before_cleaning": 386087,
+        "rows_after_cleaning": 320344,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
-        "exact_duplicate_rows_collapsed": 0
+        "exact_duplicate_rows_collapsed": 65743
       },
       "data_quality": {
         "missing_values_by_column": {
@@ -1556,29 +1556,29 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 432,
-        "largest_weekday_gap_hours": 72.5,
-        "suspicious_gaps_over_72h_weekday": 2
+        "weekday_gap_count": 1590,
+        "largest_weekday_gap_hours": 259.5,
+        "suspicious_gaps_over_72h_weekday": 56
       }
     },
     {
       "instrument": "GBPUSD",
       "timeframe": "M5",
       "file": "data/GBPUSD_M5.parquet",
-      "source_file": "GBPUSD5.csv",
-      "source_timezone_declared": "GMT",
-      "source_timezone_confidence": "user_declared_unverified",
-      "detected_input_format": "datetime-ohlcv",
-      "row_count": 100000,
+      "source_file": "forexsb-native (100000 rows) + histdata M1 24yr merged, resampled to M5",
+      "source_timezone_declared": "HistData:Etc/GMT+5 (user-confirmed); native:GMT",
+      "source_timezone_confidence": "user_confirmed",
+      "detected_input_format": "native+histdata-resampled",
+      "row_count": 1790788,
       "date_range_utc": {
-        "start": "2025-03-31T12:15:00+00:00",
+        "start": "2000-05-30T22:55:00+00:00",
         "end": "2026-07-31T20:55:00+00:00"
       },
-      "file_size_bytes": 1940225,
-      "sha256": "73194dcea13139e4079a5d6e2ac3a20b1e743aa40945bfeff6f4fb40c9bac04f",
+      "file_size_bytes": 18685492,
+      "sha256": "edaa2f9a6b63e8c6173dcfb96e7efe040cbdf03cc446d13073dc27444897a4a2",
       "cleaning": {
-        "rows_before_cleaning": 100000,
-        "rows_after_cleaning": 100000,
+        "rows_before_cleaning": 1790788,
+        "rows_after_cleaning": 1790788,
         "null_timestamp_rows_dropped": 0,
         "null_price_rows_dropped": 0,
         "ohlc_invalid_rows_dropped": 0,
@@ -1594,9 +1594,9 @@
           "volume": 0
         },
         "volume_null_count": 0,
-        "weekday_gap_count": 94,
-        "largest_weekday_gap_hours": 49.08,
-        "suspicious_gaps_over_72h_weekday": 0
+        "weekday_gap_count": 17477,
+        "largest_weekday_gap_hours": 10982.33,
+        "suspicious_gaps_over_72h_weekday": 56
       }
     },
     {
@@ -1612,8 +1612,8 @@
         "start": "2010-07-16T00:00:00+00:00",
         "end": "2026-07-31T00:00:00+00:00"
       },
-      "file_size_bytes": 247048,
-      "sha256": "50062c1e55a7ff0323cb2403ad43172f7125d0419fcc4dba903d48ae4ea4eea0",
+      "file_size_bytes": 169222,
+      "sha256": "8e4e125051d35ca51ec2fce4b2f3733f84d4210937797d51b9dbac6ef302e4ea",
       "cleaning": {
         "rows_before_cleaning": 5015,
         "rows_after_cleaning": 5015,
@@ -1650,8 +1650,8 @@
         "start": "2010-07-19T02:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 2691709,
-      "sha256": "8e2c9e53b518361e744414716b9783f6aab597861d7e72f096e496131f42ec70",
+      "file_size_bytes": 1850734,
+      "sha256": "ef5d9f1f04d400853e4430fdee95ec1c6dcec009dca89150677b13bab2446a9b",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -1688,8 +1688,8 @@
         "start": "2010-07-16T16:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 1027787,
-      "sha256": "bfbeafd800bf261172682854f61c4f61f6a1e882e266dc4965c1621cafb02aee",
+      "file_size_bytes": 629210,
+      "sha256": "646745929f44f476f9f7efcf443c285ada98276b45e7829be4d9db982b05abba",
       "cleaning": {
         "rows_before_cleaning": 25852,
         "rows_after_cleaning": 25852,
@@ -1726,8 +1726,8 @@
         "start": "2026-04-24T20:49:00+00:00",
         "end": "2026-07-31T20:59:00+00:00"
       },
-      "file_size_bytes": 1629451,
-      "sha256": "a0c04844e1a75cc6242683c4a96d57f9842e69983384e2b7111309faba67f348",
+      "file_size_bytes": 1224900,
+      "sha256": "288e1090fd78e998fd966eedecbb5b329047d8239517fb3c516c6a5884a54ea2",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -1764,8 +1764,8 @@
         "start": "2022-07-27T10:30:00+00:00",
         "end": "2026-07-31T20:45:00+00:00"
       },
-      "file_size_bytes": 2000304,
-      "sha256": "9207f1430308edeecbbbab4f48c061cb2d887e29d56b844fedffbbf31115278f",
+      "file_size_bytes": 1525284,
+      "sha256": "7017c339acdc84330cd70480619825432d84608057cdde2a815731eaebe3b287",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -1802,8 +1802,8 @@
         "start": "2018-07-24T05:00:00+00:00",
         "end": "2026-07-31T20:30:00+00:00"
       },
-      "file_size_bytes": 2260466,
-      "sha256": "d5361d0766ff2723101bb59e449d4a95a87ec989f7fc71905e8caa8d894ea69a",
+      "file_size_bytes": 1640440,
+      "sha256": "09d945bc6ae38ca5d98f81064d1b0dcb91b216431836d02de051d979358a78a9",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -1840,8 +1840,8 @@
         "start": "2025-03-31T17:00:00+00:00",
         "end": "2026-07-31T20:55:00+00:00"
       },
-      "file_size_bytes": 1794672,
-      "sha256": "470fe5fee322909242cf2d341a4f8cec3296ad0aa81b2aec9380094d5eca12d5",
+      "file_size_bytes": 1402924,
+      "sha256": "c115ab814b5d16a693dadccb6626955ea24aac2f9646e64a3a3fa860cc3680d2",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -1878,8 +1878,8 @@
         "start": "2010-07-19T00:00:00+00:00",
         "end": "2026-07-31T00:00:00+00:00"
       },
-      "file_size_bytes": 259947,
-      "sha256": "6d95134f44997339c05254af9325cd3f914fc7e3fcff3c53e07fd5e53e79539d",
+      "file_size_bytes": 177858,
+      "sha256": "c85e15eeac3997c735e395fb8b713db8720ab39c7c837caaa2fa61e55cc06e62",
       "cleaning": {
         "rows_before_cleaning": 5016,
         "rows_after_cleaning": 5016,
@@ -1916,8 +1916,8 @@
         "start": "2010-07-19T20:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 2882743,
-      "sha256": "770138fd82b9bd98d16220d4248f8e336231d078336c368add43bf298fd36d19",
+      "file_size_bytes": 1923688,
+      "sha256": "0a3d401959126b0ca3609276dd877bd926f974e7a2fcd7e53eb8b8e15d047f2f",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -1954,8 +1954,8 @@
         "start": "2010-07-19T08:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 1069492,
-      "sha256": "56c87758ae8ce9ecc1799140d4cae1f578a0f03f289f621f01bcef15c29a405b",
+      "file_size_bytes": 669694,
+      "sha256": "363a3fa9f991df9d5e15da36b5a50b87d3bd6286fa3bd66ffe656a8f31326182",
       "cleaning": {
         "rows_before_cleaning": 25851,
         "rows_after_cleaning": 25851,
@@ -1992,8 +1992,8 @@
         "start": "2026-04-26T23:51:00+00:00",
         "end": "2026-07-31T20:59:00+00:00"
       },
-      "file_size_bytes": 1773686,
-      "sha256": "ace25fb8f9a7c10c1ee05ca867a4a302481112b4e8cf2a7c23b0b6167308dec8",
+      "file_size_bytes": 1323513,
+      "sha256": "1707fa1e784198374d34e06999a5c913f58ba9d31d34a24cd0902b998cc352d6",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2030,8 +2030,8 @@
         "start": "2022-07-27T23:15:00+00:00",
         "end": "2026-07-31T20:45:00+00:00"
       },
-      "file_size_bytes": 2180828,
-      "sha256": "826bec50b6c37affb9ca886eb2c97f97894e50c1d9596aa07dc11e000740b7da",
+      "file_size_bytes": 1602730,
+      "sha256": "95e84ae72896651673e0a7cde1aeae904465dff1509c951403f12cf270a085c8",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2068,8 +2068,8 @@
         "start": "2018-07-24T14:00:00+00:00",
         "end": "2026-07-31T20:30:00+00:00"
       },
-      "file_size_bytes": 2455532,
-      "sha256": "e2adbeeb9c1c8f7802f3a0b2799a3897224b2cd75b1b220c9a2e34978273b567",
+      "file_size_bytes": 1735361,
+      "sha256": "8d8737352099fd02f8aaa8578b1282f91eab5416254d636445157ce28193a131",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2106,8 +2106,8 @@
         "start": "2025-03-31T22:50:00+00:00",
         "end": "2026-07-31T20:55:00+00:00"
       },
-      "file_size_bytes": 1871083,
-      "sha256": "86ce0f4360f68bf5415c6c1f066d4f9d42841270d65ce3d7bf5bb5fe1d992805",
+      "file_size_bytes": 1450564,
+      "sha256": "c6403174a9207b59e8860b1f783399384d836d6b2ca7f7aa1b93f2ec1f8a9bf1",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2144,8 +2144,8 @@
         "start": "2010-07-19T00:00:00+00:00",
         "end": "2026-07-31T00:00:00+00:00"
       },
-      "file_size_bytes": 247225,
-      "sha256": "e6f878ff7cc46cf3e9c7dd69545fbc453869b4f2b3d8ebbd6fc4f6be3b6e1cb0",
+      "file_size_bytes": 168168,
+      "sha256": "bf4f340c546be91e12ebe8498c70921afc860fe61cd6c8325a30df7272860a3a",
       "cleaning": {
         "rows_before_cleaning": 5016,
         "rows_after_cleaning": 5016,
@@ -2182,8 +2182,8 @@
         "start": "2010-07-19T23:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 2506831,
-      "sha256": "847dc27d64d421a6206706636ab33689a650fbd022d890ca6f2c516be01c3c19",
+      "file_size_bytes": 1802879,
+      "sha256": "b29ca6c4fdca5a9458683423980d5053e7459e5dbb650e308ffd8d663dbe43a6",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2220,8 +2220,8 @@
         "start": "2010-07-19T08:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 936110,
-      "sha256": "09dd08cc938b884ab8cfa8c371dffd309165e443a36a4bea66cb35fe7fe9820a",
+      "file_size_bytes": 615033,
+      "sha256": "e63e864b1ed4e008de1ace31dc1fed959a8e4ae3a7d08c10934f236570b092d1",
       "cleaning": {
         "rows_before_cleaning": 25852,
         "rows_after_cleaning": 25852,
@@ -2258,8 +2258,8 @@
         "start": "2026-04-26T22:22:00+00:00",
         "end": "2026-07-31T20:59:00+00:00"
       },
-      "file_size_bytes": 1667705,
-      "sha256": "489ead9494be3d21b5361cb21cce83a31597f536fba04bd88f41da6955702d3b",
+      "file_size_bytes": 1252621,
+      "sha256": "04c211ae1fb94255cae264ebf991a2fa66d7eb658f00035ee6ff7fdb6dc4a777",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2296,8 +2296,8 @@
         "start": "2022-07-27T16:15:00+00:00",
         "end": "2026-07-31T20:45:00+00:00"
       },
-      "file_size_bytes": 2387567,
-      "sha256": "93dcbfd3c8dbc4081638035e69cb1ed66496924cbcb67e70f3405a6a9d9193f5",
+      "file_size_bytes": 1658839,
+      "sha256": "33902fcbb9c5a5a2962a9b355e5596904abb4244e37c21038ce904addda38d10",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2334,8 +2334,8 @@
         "start": "2018-07-24T06:30:00+00:00",
         "end": "2026-07-31T20:30:00+00:00"
       },
-      "file_size_bytes": 2425535,
-      "sha256": "25ddc3e3db839d64e90b2e0b285f9fd3a4144c89994f75ad2344a15fbb3cbdcc",
+      "file_size_bytes": 1708448,
+      "sha256": "5f5e0600d511e20f6cf6152bbf9a734b1b1d9874b1f6396bbe2c7ff2de2931ce",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2372,8 +2372,8 @@
         "start": "2025-03-31T21:20:00+00:00",
         "end": "2026-07-31T20:55:00+00:00"
       },
-      "file_size_bytes": 1915227,
-      "sha256": "269173f91b7156e41df924ef3124067620a4a917eb202c6707def4b41f34de49",
+      "file_size_bytes": 1445227,
+      "sha256": "7b06b705130fd0809b818adefbd6352012a8eb5d2f16ff1260391833f32b064d",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2410,8 +2410,8 @@
         "start": "2010-07-19T00:00:00+00:00",
         "end": "2026-07-31T00:00:00+00:00"
       },
-      "file_size_bytes": 204124,
-      "sha256": "a9aa3bdc52257a1a78c919d1208aa26a26dd5999cdd02c133c71a1c6ca2262c7",
+      "file_size_bytes": 148445,
+      "sha256": "ffad2d48e7fd89438dcf4ccda76a640a8a45d25e54cf9cb9644d9ddb43930793",
       "cleaning": {
         "rows_before_cleaning": 5017,
         "rows_after_cleaning": 5017,
@@ -2448,8 +2448,8 @@
         "start": "2010-07-19T09:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 2783838,
-      "sha256": "db007300ec6e95ca94647b455991e72cf99ce6efa81830ae736c46c84f04f71f",
+      "file_size_bytes": 2078196,
+      "sha256": "8f8b13836d0e2b96e2e15bdbd069f4b09bd498fab663cbed7af870565ad76d5e",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2486,8 +2486,8 @@
         "start": "2010-07-19T00:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 932316,
-      "sha256": "dbd967e1421527adc1b106fafa611f70e69cdaae1810bd71e9cb0b04e4a9d763",
+      "file_size_bytes": 667316,
+      "sha256": "9a9c37e120590d90a1b1a54317f6f7cc1aa6f0dc95829cd4afb442178f73fb07",
       "cleaning": {
         "rows_before_cleaning": 25853,
         "rows_after_cleaning": 25853,
@@ -2524,8 +2524,8 @@
         "start": "2026-04-27T01:42:00+00:00",
         "end": "2026-07-31T20:59:00+00:00"
       },
-      "file_size_bytes": 1715055,
-      "sha256": "8fff92afb1d589d0c8ee23fed63241624a7ff5504a1e0fcee4b6301c58b521dc",
+      "file_size_bytes": 1320711,
+      "sha256": "c700258d5c2f953a33bccb62c12dbc1982423aa859f44862734cb0978ff4cb2f",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2562,8 +2562,8 @@
         "start": "2022-07-28T05:45:00+00:00",
         "end": "2026-07-31T20:45:00+00:00"
       },
-      "file_size_bytes": 2317524,
-      "sha256": "ff9fc5bd8c3f69a740f04aac69a6d8aaa3b8a79ff51f7174545e9973c9adf445",
+      "file_size_bytes": 1783384,
+      "sha256": "2d34f412c052fd15c2075b2b9c332668bce284ec52887fd8a907748c62dcf885",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2600,8 +2600,8 @@
         "start": "2018-07-24T17:30:00+00:00",
         "end": "2026-07-31T20:30:00+00:00"
       },
-      "file_size_bytes": 2525246,
-      "sha256": "ae6f2104bf827e3e59f7f4945d9bcf32deac6c8334764bf52798760c0e94e34f",
+      "file_size_bytes": 1902692,
+      "sha256": "c155fda113ad208b90dba520c1faca791a5120a0e0fcac35abd8474c1e464d6a",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2638,8 +2638,8 @@
         "start": "2025-03-31T23:20:00+00:00",
         "end": "2026-07-31T20:55:00+00:00"
       },
-      "file_size_bytes": 2035284,
-      "sha256": "bb162e639973aa88315ab2b81b70d50a799b33ae0da6864535a754b0ba5ca352",
+      "file_size_bytes": 1569070,
+      "sha256": "d27e2161d22043b8a7ef955a1e7196a47aacf2c10553d80b7ae199288889d293",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2676,8 +2676,8 @@
         "start": "2011-02-17T00:00:00+00:00",
         "end": "2026-07-31T00:00:00+00:00"
       },
-      "file_size_bytes": 179575,
-      "sha256": "67ff14a31cc6a3744422aebc513140d28739832e1ca4578911d897e00569ad2b",
+      "file_size_bytes": 128606,
+      "sha256": "124c47831ee2a93d7164b524289c4605ce8b7978b19b58b0a876a669ccc4ecda",
       "cleaning": {
         "rows_before_cleaning": 4806,
         "rows_after_cleaning": 4806,
@@ -2714,8 +2714,8 @@
         "start": "2011-02-17T15:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 2168962,
-      "sha256": "024e3d036c4d90e01472e224db6a7dcb245049a7a72857d2222d68de654b0967",
+      "file_size_bytes": 1620239,
+      "sha256": "071719cc2d2c7b53cf7d57df29e4b39bdcae4daf30c97e545de7ef87120f6dfd",
       "cleaning": {
         "rows_before_cleaning": 93036,
         "rows_after_cleaning": 93036,
@@ -2752,8 +2752,8 @@
         "start": "2011-02-17T12:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 727892,
-      "sha256": "c1d3ffba4e5c4dee51873c0928b925f1f554f3e57185756110739e13c116f74a",
+      "file_size_bytes": 507356,
+      "sha256": "ec4f8715941df409a33967edf269504654c5f46746f4b06ce46946e844b2c78e",
       "cleaning": {
         "rows_before_cleaning": 24709,
         "rows_after_cleaning": 24709,
@@ -2790,8 +2790,8 @@
         "start": "2026-04-21T18:03:00+00:00",
         "end": "2026-07-31T20:59:00+00:00"
       },
-      "file_size_bytes": 2027202,
-      "sha256": "45f5ef7eedebd63d8c661e98b74422b797d175069a0ba3f3fc05946d6ff5cc4d",
+      "file_size_bytes": 1520810,
+      "sha256": "8a19d97631582a1e50542222916f06663d820eea567c07b646ed07e0b2ffc16d",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2828,8 +2828,8 @@
         "start": "2022-05-10T04:30:00+00:00",
         "end": "2026-07-31T20:45:00+00:00"
       },
-      "file_size_bytes": 2270866,
-      "sha256": "349bc564890d4cc5e1c318c6bebfff728c4d64214ff628aaed61fa3f830fd217",
+      "file_size_bytes": 1635084,
+      "sha256": "3fa9a3d3c5e58dccbbf5e65c4ebe7114b5262dcaceb3c49a549137ff67914f67",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2866,8 +2866,8 @@
         "start": "2018-04-03T22:30:00+00:00",
         "end": "2026-07-31T20:30:00+00:00"
       },
-      "file_size_bytes": 2253579,
-      "sha256": "d3f836ae9f30e8ac608820d56d6ad4bd3c7540253fa84f81b35082dc892acf89",
+      "file_size_bytes": 1663928,
+      "sha256": "5aaedaa4399a306a3e62ecb4456d16af24e4bd3e6df65dd3fad3f07dd2306ab6",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2904,8 +2904,8 @@
         "start": "2025-03-04T05:50:00+00:00",
         "end": "2026-07-31T20:55:00+00:00"
       },
-      "file_size_bytes": 2398614,
-      "sha256": "ade8880d73c02d0cbab6016036aadead747bf5ba344a05c4a4fee4425c6473af",
+      "file_size_bytes": 1715298,
+      "sha256": "765442b7b6c1057b358c2ae04106f2e859c2803a5e306d91c4ffb671efb44bf0",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -2942,8 +2942,8 @@
         "start": "2009-10-26T00:00:00+00:00",
         "end": "2026-07-31T00:00:00+00:00"
       },
-      "file_size_bytes": 192858,
-      "sha256": "af37e2e5039ae5ba6e4aa53063515ed2e93561bd0cb7da068cecca6366b396bb",
+      "file_size_bytes": 141262,
+      "sha256": "88ff9cf0fdb6c56c97a0015fa74a31a97069efd7edfbbdc04f33dfcd2f931f24",
       "cleaning": {
         "rows_before_cleaning": 5216,
         "rows_after_cleaning": 5216,
@@ -2980,8 +2980,8 @@
         "start": "2009-11-16T09:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 3356248,
-      "sha256": "47913ac5d9c6064f34caeaed69e7bfa8ec022a7a1417233bac2f9c2a3b2e0e35",
+      "file_size_bytes": 2370491,
+      "sha256": "0a0397ad00dcf18d1581852e6a029d28c13520f03f0a6b03f4cadac43c0bd0e0",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -3018,8 +3018,8 @@
         "start": "2009-10-26T20:00:00+00:00",
         "end": "2026-07-31T20:00:00+00:00"
       },
-      "file_size_bytes": 946527,
-      "sha256": "54a8bbf1faf949a7a998a4bff48b7f670166dfdc54322ee007ae3ec875ff4db6",
+      "file_size_bytes": 671013,
+      "sha256": "397c36e6049f4aa277fbf2ed9f3adaa2770a8911da8d9e75a634c611c5643d82",
       "cleaning": {
         "rows_before_cleaning": 26836,
         "rows_after_cleaning": 26836,
@@ -3056,8 +3056,8 @@
         "start": "2026-04-21T23:41:00+00:00",
         "end": "2026-07-31T20:59:00+00:00"
       },
-      "file_size_bytes": 2517710,
-      "sha256": "f78fb783037ecdf8269fe9e6be102033fef506036aafffad1069fc208eefd3d7",
+      "file_size_bytes": 1732501,
+      "sha256": "2f6f99aa91514021907ed2abc0ad8fcaeee2d24ae1cf838c8bddf8efdc054c8c",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -3094,8 +3094,8 @@
         "start": "2022-05-10T02:00:00+00:00",
         "end": "2026-07-31T20:45:00+00:00"
       },
-      "file_size_bytes": 3087246,
-      "sha256": "1284b8d9e5c134e643cc0abf349ae934b095a056226ede681a56d3c98e5178d3",
+      "file_size_bytes": 2157709,
+      "sha256": "4f0989a275df4e0d87feb9bb0dbd9fb7a40e1e394d497f14f1f3febf4b057a3a",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -3132,8 +3132,8 @@
         "start": "2018-02-14T06:00:00+00:00",
         "end": "2026-07-31T20:30:00+00:00"
       },
-      "file_size_bytes": 3124289,
-      "sha256": "8a6acd196c965e81852a02cbff95cce83648a62ad36bc7c52ad1df9f757d7e8c",
+      "file_size_bytes": 2214432,
+      "sha256": "53920e9bb7cdc5fc86310ed75932ed3ca584ce3f1e65ab03f73f994ffc6831b9",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
@@ -3170,8 +3170,8 @@
         "start": "2025-03-04T19:00:00+00:00",
         "end": "2026-07-31T20:55:00+00:00"
       },
-      "file_size_bytes": 2993649,
-      "sha256": "9cb7f55a2e7ca58cbad50c4279881457b010eeeea1cb480f04143ef9454ed302",
+      "file_size_bytes": 2051007,
+      "sha256": "066b8c21ca314d345386a61f750bf36b4d0a969651a97bb0f948f9ebd1b92888",
       "cleaning": {
         "rows_before_cleaning": 100000,
         "rows_after_cleaning": 100000,
