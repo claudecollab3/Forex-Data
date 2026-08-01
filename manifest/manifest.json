@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-08-01T16:29:28.644170+00:00",
+  "generated_at_utc": "2026-08-01T16:42:02.736973+00:00",
   "timezone_of_all_output_data": "UTC",
-  "file_count": 20,
+  "file_count": 24,
   "files": [
     {
       "instrument": "AUDCAD",
@@ -303,6 +303,158 @@
         },
         "volume_null_count": 0,
         "weekday_gap_count": 112,
+        "largest_weekday_gap_hours": 49.08,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "AUDUSD",
+      "timeframe": "H1",
+      "file": "data/AUDUSD_H1.parquet",
+      "source_file": "AUDUSD60.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2010-07-16T11:00:00+00:00",
+        "end": "2026-07-31T20:00:00+00:00"
+      },
+      "file_size_bytes": 2926626,
+      "sha256": "57c2195a98743b77fc4ca916fb011a3089ae38ade37548a9fe3d5ed0e77e4478",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 858,
+        "largest_weekday_gap_hours": 73.0,
+        "suspicious_gaps_over_72h_weekday": 4
+      }
+    },
+    {
+      "instrument": "AUDUSD",
+      "timeframe": "H4",
+      "file": "data/AUDUSD_H4.parquet",
+      "source_file": "AUDUSD240.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 25860,
+      "date_range_utc": {
+        "start": "2010-07-15T20:00:00+00:00",
+        "end": "2026-07-31T20:00:00+00:00"
+      },
+      "file_size_bytes": 1092743,
+      "sha256": "51a3e2c418815113941c1e7472c4c656f30e3cfb3c97e536a1c3481e997d736a",
+      "cleaning": {
+        "rows_before_cleaning": 25860,
+        "rows_after_cleaning": 25860,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 853,
+        "largest_weekday_gap_hours": 72.0,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "AUDUSD",
+      "timeframe": "M15",
+      "file": "data/AUDUSD_M15.parquet",
+      "source_file": "AUDUSD15.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2022-07-28T03:15:00+00:00",
+        "end": "2026-07-31T20:45:00+00:00"
+      },
+      "file_size_bytes": 2049441,
+      "sha256": "a5b8ef0c56153e356958f35698e0809174c05fa244d6cbe81d6dff391b17aa8f",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 222,
+        "largest_weekday_gap_hours": 72.25,
+        "suspicious_gaps_over_72h_weekday": 1
+      }
+    },
+    {
+      "instrument": "AUDUSD",
+      "timeframe": "M5",
+      "file": "data/AUDUSD_M5.parquet",
+      "source_file": "AUDUSD5.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2025-03-31T22:30:00+00:00",
+        "end": "2026-07-31T20:55:00+00:00"
+      },
+      "file_size_bytes": 1960641,
+      "sha256": "cebefbf0677ec189b560ff3d9e756665a43f66ca932acf0b612ec6c353cc66fb",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 93,
         "largest_weekday_gap_hours": 49.08,
         "suspicious_gaps_over_72h_weekday": 0
       }
