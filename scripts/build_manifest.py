@@ -43,6 +43,7 @@ def main() -> int:
                 "file": f"data/{parquet_path.name}",
                 "source_file": stats.get("source_file"),
                 "source_timezone_declared": stats.get("source_timezone"),
+                "source_timezone_confidence": stats.get("source_timezone_confidence"),
                 "detected_input_format": stats.get("detected_format"),
                 "row_count": stats["rows_out"],
                 "date_range_utc": {"start": stats["start"], "end": stats["end"]},

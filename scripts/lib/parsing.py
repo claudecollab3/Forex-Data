@@ -99,6 +99,9 @@ def load_ohlcv_csv(path: str) -> ParseResult:
         )
         fmt = "generic-header"
     else:
+        col0_sample = raw_df.iloc[0, 0].strip()
+        col0_is_combined_datetime = ":" in col0_sample
+
         if ncols >= 7:
             # Date, Time, Open, High, Low, Close, Volume, [...]
             date_s = raw_df.iloc[:, 0].str.strip()
@@ -115,6 +118,20 @@ def load_ohlcv_csv(path: str) -> ParseResult:
                 }
             )
             fmt = "mt4-date-time-vol"
+        elif ncols == 6 and col0_is_combined_datetime:
+            # Datetime, Open, High, Low, Close, Volume (col0 already has date+time)
+            ts = pd.to_datetime(raw_df.iloc[:, 0].str.strip(), errors="coerce", utc=False)
+            out = pd.DataFrame(
+                {
+                    "timestamp": ts,
+                    "open": pd.to_numeric(raw_df.iloc[:, 1], errors="coerce"),
+                    "high": pd.to_numeric(raw_df.iloc[:, 2], errors="coerce"),
+                    "low": pd.to_numeric(raw_df.iloc[:, 3], errors="coerce"),
+                    "close": pd.to_numeric(raw_df.iloc[:, 4], errors="coerce"),
+                    "volume": pd.to_numeric(raw_df.iloc[:, 5], errors="coerce"),
+                }
+            )
+            fmt = "datetime-ohlcv"
         elif ncols == 6:
             date_s = raw_df.iloc[:, 0].str.strip()
             time_s = raw_df.iloc[:, 1].str.strip()

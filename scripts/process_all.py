@@ -10,6 +10,12 @@ raw/sources.csv columns:
                        the source site's documentation -- never guessed
                        silently for the final dataset.
 
+Multiple rows may share the same (instrument, timeframe) -- e.g. several
+date-range-limited exports needed to cover the full history because the
+source caps a single export at ~100k rows. All matching raw files are
+concatenated before cleaning/deduplication, so overlapping ranges between
+exports are collapsed rather than duplicated.
+
 Writes:
   data/<INSTRUMENT>_<TIMEFRAME>.parquet
   manifest/_stats/<INSTRUMENT>_<TIMEFRAME>.json   (per-file cleaning stats)
@@ -19,8 +25,11 @@ from __future__ import annotations
 import csv
 import json
 import sys
+from collections import defaultdict
 from dataclasses import asdict
 from pathlib import Path
+
+import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).parent))
 from lib.parsing import load_ohlcv_csv
@@ -41,49 +50,74 @@ def main() -> int:
     DATA.mkdir(parents=True, exist_ok=True)
     STATS_DIR.mkdir(parents=True, exist_ok=True)
 
-    ok, failed = 0, 0
+    groups: dict[tuple[str, str], dict] = defaultdict(lambda: {"filenames": [], "source_tz": None})
     with open(sources_csv, newline="") as fh:
         for row in csv.DictReader(fh):
-            filename = row["filename"].strip()
             instrument = row["instrument"].strip().upper()
             timeframe = row["timeframe"].strip().upper()
-            source_tz = row["source_timezone"].strip()
+            key = (instrument, timeframe)
+            groups[key]["filenames"].append(row["filename"].strip())
+            tz = row["source_timezone"].strip()
+            if groups[key]["source_tz"] is None:
+                groups[key]["source_tz"] = tz
+            elif groups[key]["source_tz"] != tz:
+                print(f"WARN {instrument}_{timeframe}: conflicting source_timezone across files ({groups[key]['source_tz']!r} vs {tz!r}); using {groups[key]['source_tz']!r}")
 
-            if timeframe not in TIMEFRAME_FREQ:
-                print(f"SKIP {filename}: unknown timeframe {timeframe!r}")
-                failed += 1
-                continue
+    ok, failed = 0, 0
+    for (instrument, timeframe), info in groups.items():
+        if timeframe not in TIMEFRAME_FREQ:
+            print(f"SKIP {instrument}_{timeframe}: unknown timeframe {timeframe!r}")
+            failed += 1
+            continue
 
+        source_tz = info["source_tz"]
+        parts = []
+        detected_formats = set()
+        missing = False
+        for filename in info["filenames"]:
             raw_path = RAW / filename
             if not raw_path.exists():
-                print(f"SKIP {filename}: raw file not found at {raw_path}")
-                failed += 1
-                continue
-
+                print(f"SKIP {instrument}_{timeframe}: raw file not found at {raw_path}")
+                missing = True
+                break
             try:
                 parsed = load_ohlcv_csv(str(raw_path))
-                cleaned_df, stats = clean(parsed.df, timeframe, source_tz, parsed.detected_format)
             except Exception as exc:  # noqa: BLE001
-                print(f"FAIL {filename}: {exc}")
-                failed += 1
-                continue
+                print(f"FAIL {instrument}_{timeframe} ({filename}): {exc}")
+                missing = True
+                break
+            parts.append(parsed.df)
+            detected_formats.add(parsed.detected_format)
 
-            out_name = f"{instrument}_{timeframe}"
-            out_path = DATA / f"{out_name}.parquet"
-            cleaned_df.to_parquet(out_path, engine="pyarrow", compression="snappy", index=False)
+        if missing:
+            failed += 1
+            continue
 
-            stats_dict = asdict(stats)
-            stats_dict["instrument"] = instrument
-            stats_dict["timeframe"] = timeframe
-            stats_dict["source_file"] = filename
-            with open(STATS_DIR / f"{out_name}.json", "w") as sfh:
-                json.dump(stats_dict, sfh, indent=2)
+        combined = pd.concat(parts, ignore_index=True) if len(parts) > 1 else parts[0]
 
-            print(
-                f"OK {out_name}: {stats.rows_in} -> {stats.rows_out} rows "
-                f"({stats.start} .. {stats.end}), tz={source_tz}"
-            )
-            ok += 1
+        try:
+            cleaned_df, stats = clean(combined, timeframe, source_tz, "+".join(sorted(detected_formats)))
+        except Exception as exc:  # noqa: BLE001
+            print(f"FAIL {instrument}_{timeframe}: {exc}")
+            failed += 1
+            continue
+
+        out_name = f"{instrument}_{timeframe}"
+        out_path = DATA / f"{out_name}.parquet"
+        cleaned_df.to_parquet(out_path, engine="pyarrow", compression="snappy", index=False)
+
+        stats_dict = asdict(stats)
+        stats_dict["instrument"] = instrument
+        stats_dict["timeframe"] = timeframe
+        stats_dict["source_file"] = ";".join(info["filenames"])
+        with open(STATS_DIR / f"{out_name}.json", "w") as sfh:
+            json.dump(stats_dict, sfh, indent=2)
+
+        print(
+            f"OK {out_name}: {stats.rows_in} -> {stats.rows_out} rows "
+            f"({stats.start} .. {stats.end}), tz={source_tz}, files={len(info['filenames'])}"
+        )
+        ok += 1
 
     print(f"\nDone: {ok} succeeded, {failed} failed/skipped")
     return 1 if failed and not ok else 0

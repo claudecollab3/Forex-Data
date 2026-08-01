@@ -39,6 +39,7 @@ class CleaningStats:
     exact_duplicate_rows_collapsed: int = 0
     volume_null_count: int = 0
     source_timezone: str = ""
+    source_timezone_confidence: str = "user_declared_unverified"
     detected_format: str = ""
     gap_count_weekday: int = 0
     largest_gap_hours: float = 0.0

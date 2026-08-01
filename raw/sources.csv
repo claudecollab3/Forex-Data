@@ -1,1 +1,5 @@
 filename,instrument,timeframe,source_timezone
+AUDCHF5.csv,AUDCHF,M5,UTC
+AUDCHF15.csv,AUDCHF,M15,UTC
+AUDCHF60.csv,AUDCHF,H1,UTC
+AUDCHF240.csv,AUDCHF,H4,UTC
