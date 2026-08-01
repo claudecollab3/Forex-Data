@@ -1,8 +1,160 @@
 {
-  "generated_at_utc": "2026-08-01T16:12:32.541216+00:00",
+  "generated_at_utc": "2026-08-01T16:17:34.553628+00:00",
   "timezone_of_all_output_data": "UTC",
-  "file_count": 4,
+  "file_count": 8,
   "files": [
+    {
+      "instrument": "AUDCAD",
+      "timeframe": "H1",
+      "file": "data/AUDCAD_H1.parquet",
+      "source_file": "AUDCAD60.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2010-07-15T20:00:00+00:00",
+        "end": "2026-07-31T20:00:00+00:00"
+      },
+      "file_size_bytes": 2476655,
+      "sha256": "539a4ebac2d9d4a2469267752729ee6774d9b5a768a483e615ff022f90d8fc5a",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 882,
+        "largest_weekday_gap_hours": 73.0,
+        "suspicious_gaps_over_72h_weekday": 4
+      }
+    },
+    {
+      "instrument": "AUDCAD",
+      "timeframe": "H4",
+      "file": "data/AUDCAD_H4.parquet",
+      "source_file": "AUDCAD240.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 25863,
+      "date_range_utc": {
+        "start": "2010-07-15T08:00:00+00:00",
+        "end": "2026-07-31T20:00:00+00:00"
+      },
+      "file_size_bytes": 939295,
+      "sha256": "bfbd6871aa0522f3ce954e77333132acd1abd5d788349a0c9a2e6d19859b9629",
+      "cleaning": {
+        "rows_before_cleaning": 25863,
+        "rows_after_cleaning": 25863,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 853,
+        "largest_weekday_gap_hours": 72.0,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "AUDCAD",
+      "timeframe": "M15",
+      "file": "data/AUDCAD_M15.parquet",
+      "source_file": "AUDCAD15.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2022-07-26T12:45:00+00:00",
+        "end": "2026-07-31T20:45:00+00:00"
+      },
+      "file_size_bytes": 2109672,
+      "sha256": "f921055fb03db3b65d374c7ca35923b911e929f8ae22f020ae1e520cfc3e0c89",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 253,
+        "largest_weekday_gap_hours": 72.25,
+        "suspicious_gaps_over_72h_weekday": 1
+      }
+    },
+    {
+      "instrument": "AUDCAD",
+      "timeframe": "M5",
+      "file": "data/AUDCAD_M5.parquet",
+      "source_file": "AUDCAD5.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2025-03-30T21:55:00+00:00",
+        "end": "2026-07-31T20:55:00+00:00"
+      },
+      "file_size_bytes": 2011240,
+      "sha256": "b3e4e79e077000c3e439bdc12ef13ac05f65c57fa1cc952eeda2b5814f8b4eb0",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 115,
+        "largest_weekday_gap_hours": 49.08,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
     {
       "instrument": "AUDCHF",
       "timeframe": "H1",
