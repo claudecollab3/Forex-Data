@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-08-01T17:06:06.016921+00:00",
+  "generated_at_utc": "2026-08-01T19:12:58.179794+00:00",
   "timezone_of_all_output_data": "UTC",
-  "file_count": 63,
+  "file_count": 69,
   "files": [
     {
       "instrument": "AUDCAD",
@@ -2395,6 +2395,234 @@
         "weekday_gap_count": 88,
         "largest_weekday_gap_hours": 49.08,
         "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "XAGUSD",
+      "timeframe": "D1",
+      "file": "data/XAGUSD_D1.parquet",
+      "source_file": "XAGUSD1440.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 4806,
+      "date_range_utc": {
+        "start": "2011-02-17T00:00:00+00:00",
+        "end": "2026-07-31T00:00:00+00:00"
+      },
+      "file_size_bytes": 179575,
+      "sha256": "67ff14a31cc6a3744422aebc513140d28739832e1ca4578911d897e00569ad2b",
+      "cleaning": {
+        "rows_before_cleaning": 4806,
+        "rows_after_cleaning": 4806,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 807,
+        "largest_weekday_gap_hours": 72.0,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "XAGUSD",
+      "timeframe": "H1",
+      "file": "data/XAGUSD_H1.parquet",
+      "source_file": "XAGUSD60.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 93036,
+      "date_range_utc": {
+        "start": "2011-02-17T15:00:00+00:00",
+        "end": "2026-07-31T20:00:00+00:00"
+      },
+      "file_size_bytes": 2168962,
+      "sha256": "024e3d036c4d90e01472e224db6a7dcb245049a7a72857d2222d68de654b0967",
+      "cleaning": {
+        "rows_before_cleaning": 93036,
+        "rows_after_cleaning": 93036,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 2601,
+        "largest_weekday_gap_hours": 76.0,
+        "suspicious_gaps_over_72h_weekday": 30
+      }
+    },
+    {
+      "instrument": "XAGUSD",
+      "timeframe": "H4",
+      "file": "data/XAGUSD_H4.parquet",
+      "source_file": "XAGUSD240.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 24709,
+      "date_range_utc": {
+        "start": "2011-02-17T12:00:00+00:00",
+        "end": "2026-07-31T20:00:00+00:00"
+      },
+      "file_size_bytes": 727892,
+      "sha256": "c1d3ffba4e5c4dee51873c0928b925f1f554f3e57185756110739e13c116f74a",
+      "cleaning": {
+        "rows_before_cleaning": 24709,
+        "rows_after_cleaning": 24709,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 820,
+        "largest_weekday_gap_hours": 76.0,
+        "suspicious_gaps_over_72h_weekday": 2
+      }
+    },
+    {
+      "instrument": "XAGUSD",
+      "timeframe": "M15",
+      "file": "data/XAGUSD_M15.parquet",
+      "source_file": "XAGUSD15.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2022-05-10T04:30:00+00:00",
+        "end": "2026-07-31T20:45:00+00:00"
+      },
+      "file_size_bytes": 2270866,
+      "sha256": "349bc564890d4cc5e1c318c6bebfff728c4d64214ff628aaed61fa3f830fd217",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 1094,
+        "largest_weekday_gap_hours": 73.25,
+        "suspicious_gaps_over_72h_weekday": 8
+      }
+    },
+    {
+      "instrument": "XAGUSD",
+      "timeframe": "M30",
+      "file": "data/XAGUSD_M30.parquet",
+      "source_file": "XAGUSD30.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2018-04-03T22:30:00+00:00",
+        "end": "2026-07-31T20:30:00+00:00"
+      },
+      "file_size_bytes": 2253579,
+      "sha256": "d3f836ae9f30e8ac608820d56d6ad4bd3c7540253fa84f81b35082dc892acf89",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 1566,
+        "largest_weekday_gap_hours": 75.5,
+        "suspicious_gaps_over_72h_weekday": 15
+      }
+    },
+    {
+      "instrument": "XAGUSD",
+      "timeframe": "M5",
+      "file": "data/XAGUSD_M5.parquet",
+      "source_file": "XAGUSD5.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2025-03-04T05:50:00+00:00",
+        "end": "2026-07-31T20:55:00+00:00"
+      },
+      "file_size_bytes": 2398614,
+      "sha256": "ade8880d73c02d0cbab6016036aadead747bf5ba344a05c4a4fee4425c6473af",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 429,
+        "largest_weekday_gap_hours": 73.08,
+        "suspicious_gaps_over_72h_weekday": 2
       }
     }
   ]
