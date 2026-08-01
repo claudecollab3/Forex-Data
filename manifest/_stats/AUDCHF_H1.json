@@ -6,7 +6,7 @@
   "ohlc_invalid_dropped": 0,
   "exact_duplicate_rows_collapsed": 0,
   "volume_null_count": 0,
-  "source_timezone": "UTC",
+  "source_timezone": "GMT",
   "source_timezone_confidence": "user_declared_unverified",
   "detected_format": "datetime-ohlcv",
   "gap_count_weekday": 860,
