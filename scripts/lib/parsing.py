@@ -74,6 +74,18 @@ def load_ohlcv_csv(path: str) -> ParseResult:
         c = lower_map.get("close")
         v = next((lower_map[k] for k in ("volume", "vol", "tickvol", "tick_volume") if k in lower_map), None)
 
+        if not (dt_col or (date_col and time_col) or date_col):
+            # Unrecognized column name for the timestamp (e.g. a tz label
+            # like "Etc/UTC" used as the header). Fall back to: whichever
+            # column isn't O/H/L/C/Volume and parses as a datetime.
+            used = {o, h, l, c, v} - {None}
+            candidates = [col for col in raw_df.columns if col not in used]
+            for col in candidates:
+                sample = pd.to_datetime(raw_df[col].head(20), errors="coerce")
+                if sample.notna().all():
+                    dt_col = col
+                    break
+
         if dt_col:
             ts = pd.to_datetime(raw_df[dt_col].str.strip(), errors="coerce", utc=False)
         elif date_col and time_col:

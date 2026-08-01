@@ -6,9 +6,32 @@ accompanying data-quality manifest.
 
 ## Instruments & timeframes
 
-EUR/USD, GBP/USD, USD/JPY, USD/CHF, USD/CAD, AUD/USD, NZD/USD, XAU/USD
-across M5, M15, H1, H4 — maximum history available per instrument/timeframe
-from the source.
+**Required 8:** EUR/USD, GBP/USD, USD/JPY, USD/CHF, USD/CAD, AUD/USD,
+NZD/USD, XAU/USD — each at M1, M5, M15, M30, H1, H4, D1 (M5/M15/H1/H4 were
+the originally-scoped timeframes; M1/M30/D1 were added on request).
+
+**Bonus instruments** (not part of the original request, included because
+raw data was provided): AUDCHF, AUDCAD, BTCUSD, XAGUSD (silver) — same
+timeframe set.
+
+### Actual history coverage (years, as of the last manifest build)
+
+| Instrument | M1 | M5 | M15 | M30 | H1 | H4 | D1 |
+|---|---|---|---|---|---|---|---|
+| EUR/USD, GBP/USD, USD/JPY, USD/CHF, USD/CAD, AUD/USD, NZD/USD | 0.3 | 1.3 | 4.0 | 8.0 | 16.0 | 16.0 | 16.0 |
+| XAU/USD | 0.3 | 1.4 | 4.2 | 8.5 | 16.7 | 16.8 | 16.8 |
+| AUDCAD, AUDCHF (bonus) | 0.3 | 1.3 | 4.0 | 8.0 | 16.0 | 16.0 | 16.0 |
+| XAGUSD (bonus) | 0.3 | 1.4 | 4.2 | 8.3 | 15.4 | 15.4 | 15.4 |
+| BTCUSD (bonus) | 0.2 | 1.0 | 2.9 | 5.8 | 9.2 | 9.2 | 9.2 |
+
+**This does not reach the 20-year target uniformly.** H1/H4/D1 land close to
+it (~16-17 years) and are treated as the practical ceiling for this source.
+M1/M5/M15/M30 fall well short (down to a few months for M1) because the
+source cannot export more than ~100,000 rows in a single download, and it
+only supports single-day-granularity date ranges — extending the fine
+timeframes to 20 years of continuous history would require on the order of
+thousands of per-day downloads per instrument/timeframe, which was judged
+impractical. See `manifest/manifest.csv` for the exact per-file range.
 
 ## Layout
 
@@ -65,7 +88,15 @@ python3 scripts/build_manifest.py  # data/*.parquet -> manifest/*
 
 ## Source & license
 
-<!-- Fill in once the raw data source and its usage terms are confirmed. -->
+Raw data was downloaded by hand from **forexsb.com** (Forex Strategy
+Builder's historical data downloads) and supplied to this pipeline as CSV
+exports.
+
+**The site's specific usage terms have not yet been independently verified
+by the pipeline author** (this session had no direct network access to the
+source). Before treating this dataset as cleared for a given use (e.g.
+redistribution, commercial use), confirm forexsb.com's actual license/terms
+of use for its historical data downloads.
 
 ## Known limitations
 
