@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-08-01T16:56:35.213508+00:00",
+  "generated_at_utc": "2026-08-01T17:00:18.696149+00:00",
   "timezone_of_all_output_data": "UTC",
-  "file_count": 49,
+  "file_count": 56,
   "files": [
     {
       "instrument": "AUDCAD",
@@ -1063,6 +1063,272 @@
         },
         "volume_null_count": 0,
         "weekday_gap_count": 92,
+        "largest_weekday_gap_hours": 49.08,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "GBPUSD",
+      "timeframe": "D1",
+      "file": "data/GBPUSD_D1.parquet",
+      "source_file": "GBPUSD1440.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 5015,
+      "date_range_utc": {
+        "start": "2010-07-19T00:00:00+00:00",
+        "end": "2026-07-31T00:00:00+00:00"
+      },
+      "file_size_bytes": 258389,
+      "sha256": "640fa78dbe89f678d9ee548c2d3a374c7b037cf8053ed4fa023b11ea066a9258",
+      "cleaning": {
+        "rows_before_cleaning": 5015,
+        "rows_after_cleaning": 5015,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 836,
+        "largest_weekday_gap_hours": 72.0,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "GBPUSD",
+      "timeframe": "H1",
+      "file": "data/GBPUSD_H1.parquet",
+      "source_file": "GBPUSD60.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2010-07-19T12:00:00+00:00",
+        "end": "2026-07-31T20:00:00+00:00"
+      },
+      "file_size_bytes": 3121199,
+      "sha256": "cce68371b2f322e781546b96f85614d27d0bf59301a1e4c69b60bcd65eb6b4c8",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 855,
+        "largest_weekday_gap_hours": 73.0,
+        "suspicious_gaps_over_72h_weekday": 4
+      }
+    },
+    {
+      "instrument": "GBPUSD",
+      "timeframe": "H4",
+      "file": "data/GBPUSD_H4.parquet",
+      "source_file": "GBPUSD240.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 25851,
+      "date_range_utc": {
+        "start": "2010-07-19T04:00:00+00:00",
+        "end": "2026-07-31T20:00:00+00:00"
+      },
+      "file_size_bytes": 1104140,
+      "sha256": "fa6f4df886c4458ffbbde2b0fcfdc49ed12775719190f635dc423ba5d3750c6f",
+      "cleaning": {
+        "rows_before_cleaning": 25851,
+        "rows_after_cleaning": 25851,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 852,
+        "largest_weekday_gap_hours": 72.0,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "GBPUSD",
+      "timeframe": "M1",
+      "file": "data/GBPUSD_M1.parquet",
+      "source_file": "GBPUSD1.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2026-04-27T01:10:00+00:00",
+        "end": "2026-07-31T20:59:00+00:00"
+      },
+      "file_size_bytes": 1727050,
+      "sha256": "4fc3fb3fbddfcabb3099d5a01ab9cd5f6568a6972f7eaebad7b50ba7c2752713",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 348,
+        "largest_weekday_gap_hours": 48.1,
+        "suspicious_gaps_over_72h_weekday": 0
+      }
+    },
+    {
+      "instrument": "GBPUSD",
+      "timeframe": "M15",
+      "file": "data/GBPUSD_M15.parquet",
+      "source_file": "GBPUSD15.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2022-07-27T17:15:00+00:00",
+        "end": "2026-07-31T20:45:00+00:00"
+      },
+      "file_size_bytes": 2462778,
+      "sha256": "7bc8c66ab8c785b86d4f44039034e94ad31b5de335a78be3682df7bc8a357f85",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 224,
+        "largest_weekday_gap_hours": 72.25,
+        "suspicious_gaps_over_72h_weekday": 1
+      }
+    },
+    {
+      "instrument": "GBPUSD",
+      "timeframe": "M30",
+      "file": "data/GBPUSD_M30.parquet",
+      "source_file": "GBPUSD30.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2018-07-24T06:00:00+00:00",
+        "end": "2026-07-31T20:30:00+00:00"
+      },
+      "file_size_bytes": 2555910,
+      "sha256": "e4ddcc1b3d429428e0f6452113220c842f1f98a35368bb19ddef14aef1de5f3a",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 432,
+        "largest_weekday_gap_hours": 72.5,
+        "suspicious_gaps_over_72h_weekday": 2
+      }
+    },
+    {
+      "instrument": "GBPUSD",
+      "timeframe": "M5",
+      "file": "data/GBPUSD_M5.parquet",
+      "source_file": "GBPUSD5.csv",
+      "source_timezone_declared": "GMT",
+      "source_timezone_confidence": "user_declared_unverified",
+      "detected_input_format": "datetime-ohlcv",
+      "row_count": 100000,
+      "date_range_utc": {
+        "start": "2025-03-31T12:15:00+00:00",
+        "end": "2026-07-31T20:55:00+00:00"
+      },
+      "file_size_bytes": 1940225,
+      "sha256": "73194dcea13139e4079a5d6e2ac3a20b1e743aa40945bfeff6f4fb40c9bac04f",
+      "cleaning": {
+        "rows_before_cleaning": 100000,
+        "rows_after_cleaning": 100000,
+        "null_timestamp_rows_dropped": 0,
+        "null_price_rows_dropped": 0,
+        "ohlc_invalid_rows_dropped": 0,
+        "exact_duplicate_rows_collapsed": 0
+      },
+      "data_quality": {
+        "missing_values_by_column": {
+          "timestamp": 0,
+          "open": 0,
+          "high": 0,
+          "low": 0,
+          "close": 0,
+          "volume": 0
+        },
+        "volume_null_count": 0,
+        "weekday_gap_count": 94,
         "largest_weekday_gap_hours": 49.08,
         "suspicious_gaps_over_72h_weekday": 0
       }
