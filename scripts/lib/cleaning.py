@@ -22,10 +22,13 @@ import numpy as np
 import pandas as pd
 
 TIMEFRAME_FREQ = {
+    "M1": pd.Timedelta(minutes=1),
     "M5": pd.Timedelta(minutes=5),
     "M15": pd.Timedelta(minutes=15),
+    "M30": pd.Timedelta(minutes=30),
     "H1": pd.Timedelta(hours=1),
     "H4": pd.Timedelta(hours=4),
+    "D1": pd.Timedelta(days=1),
 }
 
 
