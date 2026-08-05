@@ -1,0 +1,5 @@
+# Raw HistData exports (large, keep out of git — fetch/unzip locally as needed)
+data/
+*.xlsx
+*.parquet
+__pycache__/
