@@ -100,9 +100,24 @@
 //|    profit"). Moved the TP lock into CheckTPLock(), now called on   |
 //|    every tick in OnTick() BEFORE the once-per-bar gate, so it      |
 //|    reacts the instant the target is actually touched.              |
+//|                                                                    |
+//| v1.05 FIX: MODE_GRID had NO safety valve at all (unlike           |
+//|    MODE_HEDGED, which has the formula unwind + MaxHedgeHoldDays). |
+//|    Touches only increment on an outside-band -> inside-band ->    |
+//|    outside-band cycle, so a sustained one-directional trend that   |
+//|    never bounces back inside the band leaves touchesThisCycle     |
+//|    stuck at 1 forever -- the hedge trigger (5th touch) never      |
+//|    fires. Once the grid also hits MaxGridLevels and stops adding,  |
+//|    the ONLY remaining exit was recovering all the way back to      |
+//|    weighted-avg + CloseProfitPips, which in a real trend can take  |
+//|    a very long time or never happen -- seen live as a cycle that   |
+//|    just sits floating in loss with balance completely flat.        |
+//|    Added MaxGridHoldDays (default 5, mirrors MaxHedgeHoldDays):    |
+//|    force-closes a MODE_GRID cycle after that many calendar days    |
+//|    from cycle-open if it hasn't resolved on its own. 0 disables.   |
 //+------------------------------------------------------------------+
 #property copyright "Built collaboratively -- see chat history for full backtest validation"
-#property version   "1.04"
+#property version   "1.05"
 #property strict
 
 #include <Trade\Trade.mqh>
@@ -122,6 +137,13 @@ input int    MaxHedgeHoldDays      = 5;      // Safety valve: force-close hedge 
                                               // days if the choppy-day formula hasn't naturally unwound it
                                               // yet (0 = disabled -- original behavior, hold indefinitely
                                               // until a "not choppy" day). See v1.02 note above.
+input int    MaxGridHoldDays       = 5;      // Safety valve: force-close a MODE_GRID cycle (grid opened,
+                                              // hedge NOT triggered yet) after this many calendar days from
+                                              // cycle open, even if it never recovered to profit and never
+                                              // reached TouchesToHedge (a sustained one-directional trend
+                                              // never "touches back" inside the band, so it can otherwise
+                                              // sit frozen at MaxGridLevels indefinitely). 0 = disabled.
+                                              // See v1.05 note above.
 input double TPLockCurrency        = 2.0;    // TP LOCK: the instant combined floating profit (grid+hedge
                                               // together, account currency) reaches this amount, close
                                               // everything immediately and open a fresh cycle. Checked
@@ -589,6 +611,27 @@ void ManageStrategy()
 
    if(mode == MODE_GRID)
    {
+      // safety valve: a sustained one-directional trend never bounces back inside the touch
+      // band, so touchesThisCycle can get stuck at 1 forever and the hedge trigger never fires.
+      // Once the grid is also frozen at MaxGridLevels, MODE_GRID would otherwise have NO exit
+      // except recovering all the way back to weighted-avg + CloseProfitPips -- which in a real
+      // trend may be very slow or may never come. Force a close after MaxGridHoldDays so a cycle
+      // can never sit floating in an un-managed loss indefinitely.
+      if(MaxGridHoldDays > 0)
+      {
+         int daysHeld = (int)((currentDayStart - DayStart(cycleOpenTime)) / 86400);
+         if(daysHeld >= MaxGridHoldDays)
+         {
+            Print("FORCED grid close @ ", bid, " -- cycle held ", MaxGridHoldDays, "+ calendar days in ",
+                  "MODE_GRID without recovering to profit or reaching the hedge trigger (likely a sustained ",
+                  "one-directional trend with no touch-back). Closing now, opening fresh cycle. ",
+                  "(Set MaxGridHoldDays=0 to disable this safety valve.)");
+            CloseEverything();
+            OpenCycle();
+            return;
+         }
+      }
+
       double upper = cycleOpenPrice + TouchBandPips * pip;
       double lower = cycleOpenPrice - TouchBandPips * pip;
       bool touched = (hi >= upper) || (lo <= lower);
