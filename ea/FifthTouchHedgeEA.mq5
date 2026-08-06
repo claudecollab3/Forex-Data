@@ -81,9 +81,18 @@
 //|    that many calendar days if the formula hasn't naturally        |
 //|    unwound it first. Default 5; set to 0 to restore the original  |
 //|    hold-indefinitely behavior for comparison.                     |
+//|                                                                    |
+//| v1.03 ADD: TPLockCurrency -- a hard take-profit backstop, checked |
+//|    every bar, independent of mode/formula/day-count entirely. The |
+//|    moment combined floating profit across every position the EA   |
+//|    holds (all grid legs + hedge, account currency) reaches this   |
+//|    amount, everything closes immediately and a fresh cycle opens. |
+//|    This does not replace the existing profit-close (MODE_GRID)    |
+//|    or unwind (MODE_HEDGED) logic -- it's a third, independent path|
+//|    that can fire first if it's faster. Default 2.0; 0 disables.   |
 //+------------------------------------------------------------------+
 #property copyright "Built collaboratively -- see chat history for full backtest validation"
-#property version   "1.02"
+#property version   "1.03"
 #property strict
 
 #include <Trade\Trade.mqh>
@@ -103,6 +112,12 @@ input int    MaxHedgeHoldDays      = 5;      // Safety valve: force-close hedge 
                                               // days if the choppy-day formula hasn't naturally unwound it
                                               // yet (0 = disabled -- original behavior, hold indefinitely
                                               // until a "not choppy" day). See v1.02 note above.
+input double TPLockCurrency        = 2.0;    // TP LOCK: the instant combined floating profit (grid+hedge
+                                              // together, account currency) reaches this amount, close
+                                              // everything immediately and open a fresh cycle. Checked
+                                              // every bar, independent of mode/formula/day-count -- this
+                                              // is the most direct take-profit guarantee in the EA.
+                                              // 0 = disabled. See v1.03 note above.
 input ulong  MagicNumber           = 555001; // Unique magic number for this EA's positions
 input string TradeComment          = "5thTouchHedge";
 
@@ -359,6 +374,24 @@ void ClearGridArrays()
 }
 
 //+------------------------------------------------------------------+
+//| Combined floating P/L (account currency) across every position    |
+//| this EA currently holds: all grid legs + the hedge, if any. Used  |
+//| by the TP lock -- a hard, mode-independent take-profit check.     |
+//+------------------------------------------------------------------+
+double TotalFloatingProfit()
+{
+   double total = 0;
+   for(int i = 0; i < ArraySize(gridTickets); i++)
+   {
+      if(PositionSelectByTicket(gridTickets[i]))
+         total += PositionGetDouble(POSITION_PROFIT) + PositionGetDouble(POSITION_SWAP);
+   }
+   if(hedgeTicket != 0 && PositionSelectByTicket(hedgeTicket))
+      total += PositionGetDouble(POSITION_PROFIT) + PositionGetDouble(POSITION_SWAP);
+   return total;
+}
+
+//+------------------------------------------------------------------+
 //| Open a new cycle: initial long entry at current price             |
 //+------------------------------------------------------------------+
 void OpenCycle()
@@ -509,6 +542,24 @@ void ManageStrategy()
    {
       OpenCycle(); // entry is NOT gated by the choppy formula in this (accepted) version
       return;
+   }
+
+   //--- TP LOCK: hard take-profit, independent of mode/formula/day-count. Checked every bar
+   //    for both MODE_GRID and MODE_HEDGED. This is a backstop on top of (not a replacement
+   //    for) the existing profit-close and unwind logic below -- whichever condition is met
+   //    first closes the position.
+   if(TPLockCurrency > 0)
+   {
+      double floatingPL = TotalFloatingProfit();
+      if(floatingPL >= TPLockCurrency)
+      {
+         Print("TP LOCK hit @ ", bid, ": floating P/L=", DoubleToString(floatingPL, 2),
+               " >= TPLockCurrency=", DoubleToString(TPLockCurrency, 2),
+               " -- closing everything, opening fresh cycle");
+         CloseEverything();
+         OpenCycle();
+         return;
+      }
    }
 
    if(mode == MODE_GRID)
