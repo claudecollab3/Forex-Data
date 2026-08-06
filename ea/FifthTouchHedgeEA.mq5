@@ -90,9 +90,19 @@
 //|    This does not replace the existing profit-close (MODE_GRID)    |
 //|    or unwind (MODE_HEDGED) logic -- it's a third, independent path|
 //|    that can fire first if it's faster. Default 2.0; 0 disables.   |
+//|                                                                    |
+//| v1.04 FIX: the v1.03 TP lock was checked inside ManageStrategy(), |
+//|    which OnTick() only calls once per CLOSED M1 bar. That meant a |
+//|    price spike that crossed TPLockCurrency and reversed again     |
+//|    within the same minute was never seen at all -- the EA would   |
+//|    lag behind price, sample only at the minute mark, and miss     |
+//|    profit that had already come and gone ("lags outside of        |
+//|    profit"). Moved the TP lock into CheckTPLock(), now called on   |
+//|    every tick in OnTick() BEFORE the once-per-bar gate, so it      |
+//|    reacts the instant the target is actually touched.              |
 //+------------------------------------------------------------------+
 #property copyright "Built collaboratively -- see chat history for full backtest validation"
-#property version   "1.03"
+#property version   "1.04"
 #property strict
 
 #include <Trade\Trade.mqh>
@@ -491,6 +501,35 @@ void CloseEverything()
 }
 
 //+------------------------------------------------------------------+
+//| Hard TP lock -- called on EVERY tick (v1.04), NOT gated behind    |
+//| IsNewBar(). The rest of the strategy intentionally only evaluates |
+//| once per closed M1 bar (matching the backtest), but that means a  |
+//| price spike that crosses TPLockCurrency and reverses again        |
+//| WITHIN that same minute was never sampled at all -- profit was    |
+//| there and gone before the once-a-minute check ever ran. Checking  |
+//| every tick closes the instant the target is actually reached.     |
+//| Returns true if it fired (positions closed, fresh cycle opened).  |
+//+------------------------------------------------------------------+
+bool CheckTPLock()
+{
+   if(TPLockCurrency <= 0 || mode == MODE_FLAT)
+      return false;
+
+   double floatingPL = TotalFloatingProfit();
+   if(floatingPL >= TPLockCurrency)
+   {
+      double bid = SymbolInfoDouble(_Symbol, SYMBOL_BID);
+      Print("TP LOCK hit @ ", bid, ": floating P/L=", DoubleToString(floatingPL, 2),
+            " >= TPLockCurrency=", DoubleToString(TPLockCurrency, 2),
+            " -- closing everything, opening fresh cycle");
+      CloseEverything();
+      OpenCycle();
+      return true;
+   }
+   return false;
+}
+
+//+------------------------------------------------------------------+
 //| Main per-bar strategy step                                        |
 //+------------------------------------------------------------------+
 void ManageStrategy()
@@ -544,23 +583,9 @@ void ManageStrategy()
       return;
    }
 
-   //--- TP LOCK: hard take-profit, independent of mode/formula/day-count. Checked every bar
-   //    for both MODE_GRID and MODE_HEDGED. This is a backstop on top of (not a replacement
-   //    for) the existing profit-close and unwind logic below -- whichever condition is met
-   //    first closes the position.
-   if(TPLockCurrency > 0)
-   {
-      double floatingPL = TotalFloatingProfit();
-      if(floatingPL >= TPLockCurrency)
-      {
-         Print("TP LOCK hit @ ", bid, ": floating P/L=", DoubleToString(floatingPL, 2),
-               " >= TPLockCurrency=", DoubleToString(TPLockCurrency, 2),
-               " -- closing everything, opening fresh cycle");
-         CloseEverything();
-         OpenCycle();
-         return;
-      }
-   }
+   // NOTE: the TP lock is no longer checked here -- as of v1.04 it's checked on every tick in
+   // OnTick(), before this function (which only runs once per closed M1 bar) is even called.
+   // See CheckTPLock().
 
    if(mode == MODE_GRID)
    {
@@ -643,7 +668,9 @@ void ManageStrategy()
 //+------------------------------------------------------------------+
 void OnTick()
 {
-   if(!IsNewBar()) return; // this strategy operates on closed M1 bars, matching the backtest
+   if(CheckTPLock()) return; // checked every tick -- see CheckTPLock() note on why this can't wait for bar close
+
+   if(!IsNewBar()) return; // the rest of the strategy operates on closed M1 bars, matching the backtest
    ManageStrategy();
 }
 //+------------------------------------------------------------------+
