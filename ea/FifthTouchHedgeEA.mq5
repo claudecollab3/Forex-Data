@@ -120,6 +120,7 @@ datetime hedgeEntryDayStart = 0;
 datetime currentDayStart = 0;
 bool     dayFormulaComputed = false;
 bool     dayIsChoppy = true;   // default true (safe/conservative) until computed
+bool     dayGapWarningPrinted = false; // throttle: at most one "can't resolve bars" warning per day
 
 datetime lastBarTime = 0;
 
@@ -450,8 +451,14 @@ void ManageStrategy()
    //--- day rollover: reset the once-per-day formula computation
    if(todayStart != currentDayStart)
    {
+      if(mode == MODE_HEDGED)
+         Print("New day while HEDGED: ", TimeToString(todayStart, TIME_DATE),
+               " (hedge entered ", TimeToString(hedgeEntryDayStart, TIME_DATE),
+               ") -- unwind will be evaluated once this day's chop formula computes, ",
+               EarlyWindowMinutes, " min in.");
       currentDayStart = todayStart;
       dayFormulaComputed = false;
+      dayGapWarningPrinted = false;
    }
 
    //--- compute today's choppy formula once, after EarlyWindowMinutes has elapsed
@@ -462,7 +469,17 @@ void ManageStrategy()
       {
          dayIsChoppy = (score > 0);
          dayFormulaComputed = true;
-         Print("Day formula computed: score=", score, " -> ", (dayIsChoppy ? "CHOPPY" : "NOT choppy"));
+         Print("Day formula computed: score=", score, " -> ", (dayIsChoppy ? "CHOPPY" : "NOT choppy"),
+               (mode == MODE_HEDGED ? (dayIsChoppy ? "  [still holding hedge]" : "  [unwind condition MET -> closing this bar]") : ""));
+      }
+      else if(mode == MODE_HEDGED && !dayGapWarningPrinted)
+      {
+         // EarlyWindowMinutes has elapsed but ComputeChoppyScore still can't resolve bars for
+         // this day (e.g. a data gap right at the window boundary). Surface it once -- if this
+         // day never resolves, the hedge can never unwind on it at all.
+         Print("WARNING: HEDGED and ", EarlyWindowMinutes, " min into ", TimeToString(currentDayStart, TIME_DATE),
+               " but ComputeChoppyScore() could not resolve bars for the window -- will keep retrying silently.");
+         dayGapWarningPrinted = true;
       }
    }
 
