@@ -68,9 +68,22 @@
 //|    lot size before it's sent, plus a startup projection in        |
 //|    OnInit() that logs the full lot ladder so a bad Multiplier is  |
 //|    visible immediately instead of discovered mid-run.             |
+//|                                                                    |
+//| v1.02 FIX: MODE_HEDGED had no upper bound on how long a hedge     |
+//|    could be held -- the ONLY exit was a once-a-day yes/no formula |
+//|    gate (score>0 -> CHOPPY -> keep holding), with no fallback if  |
+//|    it kept landing on CHOPPY. Confirmed via a live backtest equity|
+//|    curve: balance was a dead-flat line for ~2.5 years straight    |
+//|    with margin continuously committed the whole time -- the hedge |
+//|    opened once and simply never closed again, so nothing was ever |
+//|    realized ("not taking profit in trades"). Added MaxHedgeHoldDays|
+//|    input: force-closes the hedge (and reopens a fresh cycle) after|
+//|    that many calendar days if the formula hasn't naturally        |
+//|    unwound it first. Default 5; set to 0 to restore the original  |
+//|    hold-indefinitely behavior for comparison.                     |
 //+------------------------------------------------------------------+
 #property copyright "Built collaboratively -- see chat history for full backtest validation"
-#property version   "1.01"
+#property version   "1.02"
 #property strict
 
 #include <Trade\Trade.mqh>
@@ -86,6 +99,10 @@ input int    TouchesToHedge        = 5;      // Number of touches that triggers 
 input int    EarlyWindowMinutes    = 240;    // Minutes after day-start to compute the choppy formula (4h)
 input int    ImpulseWindowStartHr  = 0;      // Impulse window start hour (server time), see notes above
 input int    ImpulseWindowEndHr    = 4;      // Impulse window end hour (server time, exclusive)
+input int    MaxHedgeHoldDays      = 5;      // Safety valve: force-close hedge after this many calendar
+                                              // days if the choppy-day formula hasn't naturally unwound it
+                                              // yet (0 = disabled -- original behavior, hold indefinitely
+                                              // until a "not choppy" day). See v1.02 note above.
 input ulong  MagicNumber           = 555001; // Unique magic number for this EA's positions
 input string TradeComment          = "5thTouchHedge";
 
@@ -541,9 +558,31 @@ void ManageStrategy()
    else if(mode == MODE_HEDGED)
    {
       // unwind signal: a genuinely NEW day (past the hedge-entry day) computes "not choppy"
-      if(currentDayStart != hedgeEntryDayStart && dayFormulaComputed && !dayIsChoppy)
+      bool naturalUnwind = (currentDayStart != hedgeEntryDayStart && dayFormulaComputed && !dayIsChoppy);
+
+      // safety valve: the choppy-day formula is a single once-a-day yes/no gate with no upper
+      // bound -- on some symbols/periods it can keep landing on CHOPPY for a very long stretch,
+      // which holds the hedge (and its floating P&L) open indefinitely and never realizes
+      // anything. Force a close after MaxHedgeHoldDays regardless of the formula.
+      bool forcedUnwind = false;
+      if(!naturalUnwind && MaxHedgeHoldDays > 0)
+      {
+         int daysHeld = (int)((currentDayStart - hedgeEntryDayStart) / 86400);
+         if(daysHeld >= MaxHedgeHoldDays)
+            forcedUnwind = true;
+      }
+
+      if(naturalUnwind)
       {
          Print("Unwind signal @ ", bid, " -- closing hedge + grid, opening fresh cycle");
+         CloseEverything();
+         OpenCycle();
+      }
+      else if(forcedUnwind)
+      {
+         Print("FORCED unwind @ ", bid, " -- hedge held ", MaxHedgeHoldDays,
+               "+ calendar days without a natural (not-choppy) unwind. Closing hedge + grid, ",
+               "opening fresh cycle. (Set MaxHedgeHoldDays=0 to disable this safety valve.)");
          CloseEverything();
          OpenCycle();
       }
