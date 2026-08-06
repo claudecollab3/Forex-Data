@@ -48,6 +48,12 @@
 //|    may need the ImpulseWindowStartHour/EndHour inputs adjusted.   |
 //|  - This EA is single-direction-long-only by design, matching every|
 //|    backtest run. It does not also run a short-side cycle.         |
+//|  - As of v1.06 the live tick path (IsNewMinute, touch detection)  |
+//|    no longer depends on any bar timeframe, so the chart/tested     |
+//|    period no longer matters -- test/attach on any period you like.|
+//|    ComputeChoppyScore() still needs M1 history to be loadable for  |
+//|    the once-a-day formula; if it isn't, that formula just falls    |
+//|    back to the MaxHedgeHoldDays safety valve (already handled).    |
 //|  - PAPER/DEMO TEST FIRST. See the conversation this was built in  |
 //|    for the full list of validated vs. unvalidated assumptions     |
 //|    (spread costs were modeled at ~1.5-1.8 pips forex / $0.25 gold;|
@@ -115,9 +121,35 @@
 //|    Added MaxGridHoldDays (default 5, mirrors MaxHedgeHoldDays):    |
 //|    force-closes a MODE_GRID cycle after that many calendar days    |
 //|    from cycle-open if it hasn't resolved on its own. 0 disables.   |
+//|                                                                    |
+//| v1.06 FIX (root cause, confirmed via live backtest trade history): |
+//|    a hedge opened once (2015.03.16) and then NOTHING happened --   |
+//|    no natural unwind, no MaxHedgeHoldDays, no MaxGridHoldDays, no  |
+//|    TP lock -- for ~9.5 months, until the tester's own "end of      |
+//|    test" liquidation closed it, NOT any EA logic. Root cause:      |
+//|    IsNewBar() read iTime(_Symbol, PERIOD_M1, 0) -- the M1 bar-     |
+//|    object cache. The tester/chart period in that run was M5, and   |
+//|    MT5 does not reliably keep a NON-chart timeframe's bar cache    |
+//|    updating in Strategy Tester -- iTime(PERIOD_M1,0) got stuck     |
+//|    returning the same value forever, so IsNewBar() stopped         |
+//|    returning true, so ManageStrategy() (and every safety valve     |
+//|    inside it -- ALL of v1.02/v1.03/v1.05) simply stopped running,  |
+//|    even though OnTick() itself kept firing every tick the whole    |
+//|    time. This explains why v1.02-v1.05 each looked correct in      |
+//|    isolation (verified in scripts/simulate_ea.py) yet changed      |
+//|    nothing live: none of that code was ever running once this hit.|
+//|    Fixed by replacing IsNewBar() with IsNewMinute(), which uses    |
+//|    TimeCurrent() directly instead of any bar-object cache --       |
+//|    TimeCurrent() always advances every tick regardless of the      |
+//|    chart/tested period, so this class of stall can't recur. Also   |
+//|    switched touch-band detection from iHigh/iLow(PERIOD_M1,0) to   |
+//|    live bid/ask, removing the last live-path dependency on a non-  |
+//|    chart timeframe's bar cache (ComputeChoppyScore() still reads   |
+//|    PERIOD_M1 history for the once-a-day formula, which is fine --  |
+//|    it already fails gracefully and no longer blocks anything else).|
 //+------------------------------------------------------------------+
 #property copyright "Built collaboratively -- see chat history for full backtest validation"
-#property version   "1.05"
+#property version   "1.06"
 #property strict
 
 #include <Trade\Trade.mqh>
@@ -257,14 +289,31 @@ int OnInit()
 void OnDeinit(const int reason) {}
 
 //+------------------------------------------------------------------+
-//| Returns true once per new M1 bar                                  |
+//| Returns true once per new server-time minute. v1.06 FIX: this was |
+//| previously iTime(_Symbol, PERIOD_M1, 0) -- the M1 bar-object      |
+//| cache. CONFIRMED via a live backtest trade history: a hedge opened|
+//| once (2015.03.16) and then NOTHING happened for ~9.5 months, only |
+//| force-liquidated by the tester's own "end of test" close -- not   |
+//| by any EA logic (natural unwind, MaxHedgeHoldDays, MaxGridHoldDays|
+//| and the TP lock never fired, because NONE of them ever ran).      |
+//| Root cause: the tester/chart period was M5, not M1. MT5 does not  |
+//| reliably keep a NON-chart timeframe's bar cache updating in the   |
+//| tester -- iTime(PERIOD_M1,0) can get stuck returning the same     |
+//| value forever, so IsNewBar() stopped returning true, so           |
+//| ManageStrategy() (and every safety valve inside it) simply        |
+//| stopped running, even though OnTick() itself kept firing the      |
+//| whole time. Now uses TimeCurrent() directly -- the tester always  |
+//| advances this every tick regardless of chart/tested period -- so  |
+//| this can never silently stall again no matter what timeframe the  |
+//| chart/tester is set to.                                           |
 //+------------------------------------------------------------------+
-bool IsNewBar()
+bool IsNewMinute()
 {
-   datetime t = iTime(_Symbol, PERIOD_M1, 0);
-   if(t != lastBarTime)
+   datetime now = TimeCurrent();
+   datetime bucket = (datetime)((long)now / 60 * 60); // floor to the start of this minute
+   if(bucket != lastBarTime)
    {
-      lastBarTime = t;
+      lastBarTime = bucket;
       return true;
    }
    return false;
@@ -524,9 +573,9 @@ void CloseEverything()
 
 //+------------------------------------------------------------------+
 //| Hard TP lock -- called on EVERY tick (v1.04), NOT gated behind    |
-//| IsNewBar(). The rest of the strategy intentionally only evaluates |
-//| once per closed M1 bar (matching the backtest), but that means a  |
-//| price spike that crosses TPLockCurrency and reverses again        |
+//| IsNewMinute(). The rest of the strategy intentionally only        |
+//| evaluates once per minute (matching the backtest), but that means |
+//| a price spike that crosses TPLockCurrency and reverses again      |
 //| WITHIN that same minute was never sampled at all -- profit was    |
 //| there and gone before the once-a-minute check ever ran. Checking  |
 //| every tick closes the instant the target is actually reached.     |
@@ -596,8 +645,11 @@ void ManageStrategy()
 
    double bid = SymbolInfoDouble(_Symbol, SYMBOL_BID);
    double ask = SymbolInfoDouble(_Symbol, SYMBOL_ASK);
-   double hi  = iHigh(_Symbol, PERIOD_M1, 0);
-   double lo  = iLow(_Symbol, PERIOD_M1, 0);
+   // v1.06: touch-band detection below now uses live bid/ask instead of iHigh/iLow(PERIOD_M1,0) --
+   // removes the last remaining dependency on the M1 bar-object cache from the live tick path (see
+   // IsNewMinute() note). ComputeChoppyScore() still reads PERIOD_M1 history for the once-a-day
+   // formula, which is fine: it already fails gracefully (falls back to MaxHedgeHoldDays) if that
+   // history isn't available, and no longer blocks anything else from running.
 
    if(mode == MODE_FLAT)
    {
@@ -634,7 +686,7 @@ void ManageStrategy()
 
       double upper = cycleOpenPrice + TouchBandPips * pip;
       double lower = cycleOpenPrice - TouchBandPips * pip;
-      bool touched = (hi >= upper) || (lo <= lower);
+      bool touched = (ask >= upper) || (bid <= lower);
 
       if(touched)
       {
@@ -713,7 +765,8 @@ void OnTick()
 {
    if(CheckTPLock()) return; // checked every tick -- see CheckTPLock() note on why this can't wait for bar close
 
-   if(!IsNewBar()) return; // the rest of the strategy operates on closed M1 bars, matching the backtest
+   if(!IsNewMinute()) return; // the rest of the strategy still evaluates once per minute, matching the
+                               // backtest cadence -- just gated on TimeCurrent() now, not a bar object
    ManageStrategy();
 }
 //+------------------------------------------------------------------+
